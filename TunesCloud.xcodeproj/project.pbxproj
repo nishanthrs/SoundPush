@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21EEE96E1AD493C3003897E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE96D1AD493C3003897E3 /* main.m */; };
+		21EEE9711AD493C3003897E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9701AD493C3003897E3 /* AppDelegate.m */; };
+		21EEE9741AD493C3003897E3 /* TunesCloud.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9721AD493C3003897E3 /* TunesCloud.xcdatamodeld */; };
+		21EEE9771AD493C3003897E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9761AD493C3003897E3 /* ViewController.m */; };
+		21EEE97A1AD493C3003897E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE9781AD493C3003897E3 /* Main.storyboard */; };
+		21EEE97C1AD493C3003897E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE97B1AD493C3003897E3 /* Images.xcassets */; };
+		21EEE97F1AD493C3003897E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE97D1AD493C3003897E3 /* LaunchScreen.xib */; };
+		21EEE98B1AD493C3003897E3 /* TunesCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE98A1AD493C3003897E3 /* TunesCloudTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21EEE9851AD493C3003897E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21EEE9601AD493C3003897E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21EEE9671AD493C3003897E3;
+			remoteInfo = TunesCloud;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21EEE9681AD493C3003897E3 /* TunesCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TunesCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21EEE96C1AD493C3003897E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21EEE96D1AD493C3003897E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		21EEE96F1AD493C3003897E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		21EEE9701AD493C3003897E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		21EEE9731AD493C3003897E3 /* TunesCloud.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TunesCloud.xcdatamodel; sourceTree = "<group>"; };
+		21EEE9751AD493C3003897E3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		21EEE9761AD493C3003897E3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		21EEE9791AD493C3003897E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21EEE97B1AD493C3003897E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		21EEE97E1AD493C3003897E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		21EEE9841AD493C3003897E3 /* TunesCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TunesCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21EEE9891AD493C3003897E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21EEE98A1AD493C3003897E3 /* TunesCloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TunesCloudTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21EEE9651AD493C3003897E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21EEE9811AD493C3003897E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21EEE95F1AD493C3003897E3 = {
+			isa = PBXGroup;
+			children = (
+				21EEE96A1AD493C3003897E3 /* TunesCloud */,
+				21EEE9871AD493C3003897E3 /* TunesCloudTests */,
+				21EEE9691AD493C3003897E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21EEE9691AD493C3003897E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE9681AD493C3003897E3 /* TunesCloud.app */,
+				21EEE9841AD493C3003897E3 /* TunesCloudTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21EEE96A1AD493C3003897E3 /* TunesCloud */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE96F1AD493C3003897E3 /* AppDelegate.h */,
+				21EEE9701AD493C3003897E3 /* AppDelegate.m */,
+				21EEE9751AD493C3003897E3 /* ViewController.h */,
+				21EEE9761AD493C3003897E3 /* ViewController.m */,
+				21EEE9781AD493C3003897E3 /* Main.storyboard */,
+				21EEE97B1AD493C3003897E3 /* Images.xcassets */,
+				21EEE97D1AD493C3003897E3 /* LaunchScreen.xib */,
+				21EEE9721AD493C3003897E3 /* TunesCloud.xcdatamodeld */,
+				21EEE96B1AD493C3003897E3 /* Supporting Files */,
+			);
+			path = TunesCloud;
+			sourceTree = "<group>";
+		};
+		21EEE96B1AD493C3003897E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE96C1AD493C3003897E3 /* Info.plist */,
+				21EEE96D1AD493C3003897E3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21EEE9871AD493C3003897E3 /* TunesCloudTests */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE98A1AD493C3003897E3 /* TunesCloudTests.m */,
+				21EEE9881AD493C3003897E3 /* Supporting Files */,
+			);
+			path = TunesCloudTests;
+			sourceTree = "<group>";
+		};
+		21EEE9881AD493C3003897E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE9891AD493C3003897E3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21EEE9671AD493C3003897E3 /* TunesCloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21EEE98E1AD493C3003897E3 /* Build configuration list for PBXNativeTarget "TunesCloud" */;
+			buildPhases = (
+				21EEE9641AD493C3003897E3 /* Sources */,
+				21EEE9651AD493C3003897E3 /* Frameworks */,
+				21EEE9661AD493C3003897E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TunesCloud;
+			productName = TunesCloud;
+			productReference = 21EEE9681AD493C3003897E3 /* TunesCloud.app */;
+			productType = "com.apple.product-type.application";
+		};
+		21EEE9831AD493C3003897E3 /* TunesCloudTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21EEE9911AD493C3003897E3 /* Build configuration list for PBXNativeTarget "TunesCloudTests" */;
+			buildPhases = (
+				21EEE9801AD493C3003897E3 /* Sources */,
+				21EEE9811AD493C3003897E3 /* Frameworks */,
+				21EEE9821AD493C3003897E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21EEE9861AD493C3003897E3 /* PBXTargetDependency */,
+			);
+			name = TunesCloudTests;
+			productName = TunesCloudTests;
+			productReference = 21EEE9841AD493C3003897E3 /* TunesCloudTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21EEE9601AD493C3003897E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Nishanth Salinamakki";
+				TargetAttributes = {
+					21EEE9671AD493C3003897E3 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					21EEE9831AD493C3003897E3 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 21EEE9671AD493C3003897E3;
+					};
+				};
+			};
+			buildConfigurationList = 21EEE9631AD493C3003897E3 /* Build configuration list for PBXProject "TunesCloud" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21EEE95F1AD493C3003897E3;
+			productRefGroup = 21EEE9691AD493C3003897E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21EEE9671AD493C3003897E3 /* TunesCloud */,
+				21EEE9831AD493C3003897E3 /* TunesCloudTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21EEE9661AD493C3003897E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21EEE97A1AD493C3003897E3 /* Main.storyboard in Resources */,
+				21EEE97F1AD493C3003897E3 /* LaunchScreen.xib in Resources */,
+				21EEE97C1AD493C3003897E3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21EEE9821AD493C3003897E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21EEE9641AD493C3003897E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21EEE9711AD493C3003897E3 /* AppDelegate.m in Sources */,
+				21EEE9741AD493C3003897E3 /* TunesCloud.xcdatamodeld in Sources */,
+				21EEE9771AD493C3003897E3 /* ViewController.m in Sources */,
+				21EEE96E1AD493C3003897E3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21EEE9801AD493C3003897E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21EEE98B1AD493C3003897E3 /* TunesCloudTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21EEE9861AD493C3003897E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21EEE9671AD493C3003897E3 /* TunesCloud */;
+			targetProxy = 21EEE9851AD493C3003897E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		21EEE9781AD493C3003897E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21EEE9791AD493C3003897E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21EEE97D1AD493C3003897E3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21EEE97E1AD493C3003897E3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21EEE98C1AD493C3003897E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		21EEE98D1AD493C3003897E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21EEE98F1AD493C3003897E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TunesCloud/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		21EEE9901AD493C3003897E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TunesCloud/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		21EEE9921AD493C3003897E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TunesCloudTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TunesCloud.app/TunesCloud";
+			};
+			name = Debug;
+		};
+		21EEE9931AD493C3003897E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TunesCloudTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TunesCloud.app/TunesCloud";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21EEE9631AD493C3003897E3 /* Build configuration list for PBXProject "TunesCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21EEE98C1AD493C3003897E3 /* Debug */,
+				21EEE98D1AD493C3003897E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21EEE98E1AD493C3003897E3 /* Build configuration list for PBXNativeTarget "TunesCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21EEE98F1AD493C3003897E3 /* Debug */,
+				21EEE9901AD493C3003897E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		21EEE9911AD493C3003897E3 /* Build configuration list for PBXNativeTarget "TunesCloudTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21EEE9921AD493C3003897E3 /* Debug */,
+				21EEE9931AD493C3003897E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		21EEE9721AD493C3003897E3 /* TunesCloud.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				21EEE9731AD493C3003897E3 /* TunesCloud.xcdatamodel */,
+			);
+			currentVersion = 21EEE9731AD493C3003897E3 /* TunesCloud.xcdatamodel */;
+			path = TunesCloud.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 21EEE9601AD493C3003897E3 /* Project object */;
+}
