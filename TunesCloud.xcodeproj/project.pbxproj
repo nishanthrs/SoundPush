@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2126B29D1ADAF1E000F69ECC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2126B29C1ADAF1E000F69ECC /* Accounts.framework */; };
+		2126B29F1ADAF20000F69ECC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2126B29E1ADAF20000F69ECC /* Social.framework */; };
+		2126B2A81ADAF4E900F69ECC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2126B2A71ADAF4E900F69ECC /* Parse.framework */; };
+		2126B2AA1ADAF50F00F69ECC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2126B2A91ADAF50F00F69ECC /* Bolts.framework */; };
+		2126B2AE1ADAF54800F69ECC /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2126B2AD1ADAF54800F69ECC /* ParseCrashReporting.framework */; };
+		2126B2B01ADAF55B00F69ECC /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2126B2AF1ADAF55B00F69ECC /* ParseUI.framework */; };
+		2126B2B61ADB115B00F69ECC /* PythonTestFile.py in Resources */ = {isa = PBXBuildFile; fileRef = 2126B2B51ADB115B00F69ECC /* PythonTestFile.py */; };
 		21EEE96E1AD493C3003897E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE96D1AD493C3003897E3 /* main.m */; };
 		21EEE9711AD493C3003897E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9701AD493C3003897E3 /* AppDelegate.m */; };
 		21EEE9741AD493C3003897E3 /* TunesCloud.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9721AD493C3003897E3 /* TunesCloud.xcdatamodeld */; };
@@ -15,6 +22,40 @@
 		21EEE97C1AD493C3003897E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE97B1AD493C3003897E3 /* Images.xcassets */; };
 		21EEE97F1AD493C3003897E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE97D1AD493C3003897E3 /* LaunchScreen.xib */; };
 		21EEE98B1AD493C3003897E3 /* TunesCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE98A1AD493C3003897E3 /* TunesCloudTests.m */; };
+		21EEE9961AD49479003897E3 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9951AD49479003897E3 /* PageContentViewController.m */; };
+		21EEE9981AD49577003897E3 /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE9971AD49577003897E3 /* Button.png */; };
+		21EEE99A1AD4990F003897E3 /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE9991AD4990F003897E3 /* page1.png */; };
+		21EEE99C1AD49915003897E3 /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE99B1AD49915003897E3 /* page2.png */; };
+		21EEE99E1AD4991C003897E3 /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE99D1AD4991C003897E3 /* page3.png */; };
+		21EEE9A01AD49923003897E3 /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE99F1AD49923003897E3 /* page4.png */; };
+		21EEE9A31AD49B0D003897E3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9A21AD49B0D003897E3 /* LoginViewController.m */; };
+		21EEE9A61AD49B1A003897E3 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9A51AD49B1A003897E3 /* SignUpViewController.m */; };
+		21EEE9A81AD4D469003897E3 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9A71AD4D469003897E3 /* libstdc++.dylib */; };
+		21EEE9AA1AD4D472003897E3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9A91AD4D472003897E3 /* libxml2.dylib */; };
+		21EEE9AD1AD4D4AC003897E3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9AC1AD4D4AC003897E3 /* MediaPlayer.framework */; };
+		21EEE9AF1AD4D4B4003897E3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9AE1AD4D4B4003897E3 /* CoreMedia.framework */; };
+		21EEE9B11AD4D4ED003897E3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9B01AD4D4ED003897E3 /* AVFoundation.framework */; };
+		21EEE9B31AD4D4F8003897E3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9B21AD4D4F8003897E3 /* libz.dylib */; };
+		21EEE9B51AD4D501003897E3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9B41AD4D501003897E3 /* libsqlite3.dylib */; };
+		21EEE9B71AD4D50A003897E3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9B61AD4D50A003897E3 /* SystemConfiguration.framework */; };
+		21EEE9B91AD4D511003897E3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9B81AD4D511003897E3 /* StoreKit.framework */; };
+		21EEE9BB1AD4D516003897E3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9BA1AD4D516003897E3 /* Security.framework */; };
+		21EEE9BD1AD4D51C003897E3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9BC1AD4D51C003897E3 /* QuartzCore.framework */; };
+		21EEE9BF1AD4D523003897E3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9BE1AD4D523003897E3 /* MobileCoreServices.framework */; };
+		21EEE9C11AD4D52B003897E3 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9C01AD4D52B003897E3 /* libz.1.1.3.dylib */; };
+		21EEE9C31AD4D531003897E3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9C21AD4D531003897E3 /* CoreLocation.framework */; };
+		21EEE9C51AD4D539003897E3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9C41AD4D539003897E3 /* CFNetwork.framework */; };
+		21EEE9C71AD4D53F003897E3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9C61AD4D53F003897E3 /* AudioToolbox.framework */; };
+		21EEE9C91AD4D546003897E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9C81AD4D546003897E3 /* CoreGraphics.framework */; };
+		21EEE9CB1AD4D54E003897E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9CA1AD4D54E003897E3 /* Foundation.framework */; };
+		21EEE9CD1AD4D554003897E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EEE9CC1AD4D554003897E3 /* UIKit.framework */; };
+		21EEE9F41AD65EB0003897E3 /* ITunesSearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9F31AD65EB0003897E3 /* ITunesSearchResultsTableViewController.m */; };
+		21EEE9F61AD6947A003897E3 /* CustomiTunesSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21EEE9F51AD6947A003897E3 /* CustomiTunesSearchTableViewCell.xib */; };
+		21EEE9F91AD69551003897E3 /* CustomiTunesSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9F81AD69551003897E3 /* CustomiTunesSearchTableViewCell.m */; };
+		21EEE9FC1AD71EDF003897E3 /* ITunesAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9FB1AD71EDF003897E3 /* ITunesAPIController.m */; };
+		21EEEA021AD9F1C0003897E3 /* ITunesSongInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEEA011AD9F1C0003897E3 /* ITunesSongInfoViewController.m */; };
+		21EEEA051ADA1000003897E3 /* SongInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEEA041ADA1000003897E3 /* SongInfo.m */; };
+		21EEEA0A1ADA45DF003897E3 /* AddNewFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEEA091ADA45DF003897E3 /* AddNewFriendsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +69,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2126B29C1ADAF1E000F69ECC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		2126B29E1ADAF20000F69ECC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		2126B2A71ADAF4E900F69ECC /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../Downloads/parse-library-1/Parse.framework"; sourceTree = "<group>"; };
+		2126B2A91ADAF50F00F69ECC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../Downloads/parse-library-1/Bolts.framework"; sourceTree = "<group>"; };
+		2126B2AD1ADAF54800F69ECC /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../../../../Downloads/parse-library-1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		2126B2AF1ADAF55B00F69ECC /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../../Downloads/parse-library-1/ParseUI.framework"; sourceTree = "<group>"; };
+		2126B2B51ADB115B00F69ECC /* PythonTestFile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PythonTestFile.py; sourceTree = "<group>"; };
 		21EEE9681AD493C3003897E3 /* TunesCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TunesCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EEE96C1AD493C3003897E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21EEE96D1AD493C3003897E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +90,54 @@
 		21EEE9841AD493C3003897E3 /* TunesCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TunesCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EEE9891AD493C3003897E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21EEE98A1AD493C3003897E3 /* TunesCloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TunesCloudTests.m; sourceTree = "<group>"; };
+		21EEE9941AD49479003897E3 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		21EEE9951AD49479003897E3 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		21EEE9971AD49577003897E3 /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
+		21EEE9991AD4990F003897E3 /* page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page1.png; sourceTree = "<group>"; };
+		21EEE99B1AD49915003897E3 /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
+		21EEE99D1AD4991C003897E3 /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
+		21EEE99F1AD49923003897E3 /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
+		21EEE9A11AD49B0D003897E3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		21EEE9A21AD49B0D003897E3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		21EEE9A41AD49B1A003897E3 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		21EEE9A51AD49B1A003897E3 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		21EEE9A71AD4D469003897E3 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		21EEE9A91AD4D472003897E3 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		21EEE9AC1AD4D4AC003897E3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		21EEE9AE1AD4D4B4003897E3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		21EEE9B01AD4D4ED003897E3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		21EEE9B21AD4D4F8003897E3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		21EEE9B41AD4D501003897E3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		21EEE9B61AD4D50A003897E3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		21EEE9B81AD4D511003897E3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		21EEE9BA1AD4D516003897E3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		21EEE9BC1AD4D51C003897E3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		21EEE9BE1AD4D523003897E3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		21EEE9C01AD4D52B003897E3 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		21EEE9C21AD4D531003897E3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		21EEE9C41AD4D539003897E3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		21EEE9C61AD4D53F003897E3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		21EEE9C81AD4D546003897E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		21EEE9CA1AD4D54E003897E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		21EEE9CC1AD4D554003897E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		21EEE9CE1AD4D659003897E3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../Facebook-Parse iOS SDK/Parse.framework"; sourceTree = "<group>"; };
+		21EEE9CF1AD4D659003897E3 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../Facebook-Parse iOS SDK/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		21EEE9D01AD4D659003897E3 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "../Facebook-Parse iOS SDK/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		21EEE9D11AD4D659003897E3 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../Facebook-Parse iOS SDK/ParseUI.framework"; sourceTree = "<group>"; };
+		21EEE9D21AD4D659003897E3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../Facebook-Parse iOS SDK/Bolts.framework"; sourceTree = "<group>"; };
+		21EEE9F21AD65EB0003897E3 /* ITunesSearchResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesSearchResultsTableViewController.h; sourceTree = "<group>"; };
+		21EEE9F31AD65EB0003897E3 /* ITunesSearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITunesSearchResultsTableViewController.m; sourceTree = "<group>"; };
+		21EEE9F51AD6947A003897E3 /* CustomiTunesSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomiTunesSearchTableViewCell.xib; sourceTree = "<group>"; };
+		21EEE9F71AD69551003897E3 /* CustomiTunesSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomiTunesSearchTableViewCell.h; sourceTree = "<group>"; };
+		21EEE9F81AD69551003897E3 /* CustomiTunesSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomiTunesSearchTableViewCell.m; sourceTree = "<group>"; };
+		21EEE9FA1AD71EDF003897E3 /* ITunesAPIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesAPIController.h; sourceTree = "<group>"; };
+		21EEE9FB1AD71EDF003897E3 /* ITunesAPIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITunesAPIController.m; sourceTree = "<group>"; };
+		21EEEA001AD9F1C0003897E3 /* ITunesSongInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesSongInfoViewController.h; sourceTree = "<group>"; };
+		21EEEA011AD9F1C0003897E3 /* ITunesSongInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITunesSongInfoViewController.m; sourceTree = "<group>"; };
+		21EEEA031ADA1000003897E3 /* SongInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongInfo.h; sourceTree = "<group>"; };
+		21EEEA041ADA1000003897E3 /* SongInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongInfo.m; sourceTree = "<group>"; };
+		21EEEA081ADA45DF003897E3 /* AddNewFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewFriendsViewController.h; sourceTree = "<group>"; };
+		21EEEA091ADA45DF003897E3 /* AddNewFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewFriendsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +145,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21EEE9AD1AD4D4AC003897E3 /* MediaPlayer.framework in Frameworks */,
+				2126B2B01ADAF55B00F69ECC /* ParseUI.framework in Frameworks */,
+				2126B2AE1ADAF54800F69ECC /* ParseCrashReporting.framework in Frameworks */,
+				2126B2AA1ADAF50F00F69ECC /* Bolts.framework in Frameworks */,
+				2126B2A81ADAF4E900F69ECC /* Parse.framework in Frameworks */,
+				2126B29F1ADAF20000F69ECC /* Social.framework in Frameworks */,
+				2126B29D1ADAF1E000F69ECC /* Accounts.framework in Frameworks */,
+				21EEE9CD1AD4D554003897E3 /* UIKit.framework in Frameworks */,
+				21EEE9CB1AD4D54E003897E3 /* Foundation.framework in Frameworks */,
+				21EEE9C91AD4D546003897E3 /* CoreGraphics.framework in Frameworks */,
+				21EEE9C71AD4D53F003897E3 /* AudioToolbox.framework in Frameworks */,
+				21EEE9C51AD4D539003897E3 /* CFNetwork.framework in Frameworks */,
+				21EEE9C31AD4D531003897E3 /* CoreLocation.framework in Frameworks */,
+				21EEE9C11AD4D52B003897E3 /* libz.1.1.3.dylib in Frameworks */,
+				21EEE9BF1AD4D523003897E3 /* MobileCoreServices.framework in Frameworks */,
+				21EEE9BD1AD4D51C003897E3 /* QuartzCore.framework in Frameworks */,
+				21EEE9BB1AD4D516003897E3 /* Security.framework in Frameworks */,
+				21EEE9B91AD4D511003897E3 /* StoreKit.framework in Frameworks */,
+				21EEE9B71AD4D50A003897E3 /* SystemConfiguration.framework in Frameworks */,
+				21EEE9B51AD4D501003897E3 /* libsqlite3.dylib in Frameworks */,
+				21EEE9B31AD4D4F8003897E3 /* libz.dylib in Frameworks */,
+				21EEE9B11AD4D4ED003897E3 /* AVFoundation.framework in Frameworks */,
+				21EEE9AF1AD4D4B4003897E3 /* CoreMedia.framework in Frameworks */,
+				21EEE9AA1AD4D472003897E3 /* libxml2.dylib in Frameworks */,
+				21EEE9A81AD4D469003897E3 /* libstdc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +183,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2126B2C31ADB1BF500F69ECC /* Music Recognition Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Music Recognition Files";
+			sourceTree = "<group>";
+		};
 		21EEE95F1AD493C3003897E3 = {
 			isa = PBXGroup;
 			children = (
+				2126B2B51ADB115B00F69ECC /* PythonTestFile.py */,
 				21EEE96A1AD493C3003897E3 /* TunesCloud */,
 				21EEE9871AD493C3003897E3 /* TunesCloudTests */,
 				21EEE9691AD493C3003897E3 /* Products */,
+				21EEE9AB1AD4D489003897E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,10 +213,9 @@
 		21EEE96A1AD493C3003897E3 /* TunesCloud */ = {
 			isa = PBXGroup;
 			children = (
-				21EEE96F1AD493C3003897E3 /* AppDelegate.h */,
-				21EEE9701AD493C3003897E3 /* AppDelegate.m */,
-				21EEE9751AD493C3003897E3 /* ViewController.h */,
-				21EEE9761AD493C3003897E3 /* ViewController.m */,
+				21EEE9EF1AD5DD84003897E3 /* App Setup */,
+				21EEE9EE1AD5DD40003897E3 /* Intro Scenes */,
+				21EEE9F11AD5DDB5003897E3 /* Actual App */,
 				21EEE9781AD493C3003897E3 /* Main.storyboard */,
 				21EEE97B1AD493C3003897E3 /* Images.xcassets */,
 				21EEE97D1AD493C3003897E3 /* LaunchScreen.xib */,
@@ -99,6 +228,11 @@
 		21EEE96B1AD493C3003897E3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				21EEE99F1AD49923003897E3 /* page4.png */,
+				21EEE99D1AD4991C003897E3 /* page3.png */,
+				21EEE99B1AD49915003897E3 /* page2.png */,
+				21EEE9991AD4990F003897E3 /* page1.png */,
+				21EEE9971AD49577003897E3 /* Button.png */,
 				21EEE96C1AD493C3003897E3 /* Info.plist */,
 				21EEE96D1AD493C3003897E3 /* main.m */,
 			);
@@ -120,6 +254,104 @@
 				21EEE9891AD493C3003897E3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21EEE9AB1AD4D489003897E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2126B2AF1ADAF55B00F69ECC /* ParseUI.framework */,
+				2126B2AD1ADAF54800F69ECC /* ParseCrashReporting.framework */,
+				2126B2A91ADAF50F00F69ECC /* Bolts.framework */,
+				2126B2A71ADAF4E900F69ECC /* Parse.framework */,
+				2126B29E1ADAF20000F69ECC /* Social.framework */,
+				2126B29C1ADAF1E000F69ECC /* Accounts.framework */,
+				21EEE9CE1AD4D659003897E3 /* Parse.framework */,
+				21EEE9CF1AD4D659003897E3 /* ParseCrashReporting.framework */,
+				21EEE9D01AD4D659003897E3 /* ParseFacebookUtils.framework */,
+				21EEE9D11AD4D659003897E3 /* ParseUI.framework */,
+				21EEE9D21AD4D659003897E3 /* Bolts.framework */,
+				21EEE9CC1AD4D554003897E3 /* UIKit.framework */,
+				21EEE9CA1AD4D54E003897E3 /* Foundation.framework */,
+				21EEE9C81AD4D546003897E3 /* CoreGraphics.framework */,
+				21EEE9C61AD4D53F003897E3 /* AudioToolbox.framework */,
+				21EEE9C41AD4D539003897E3 /* CFNetwork.framework */,
+				21EEE9C21AD4D531003897E3 /* CoreLocation.framework */,
+				21EEE9C01AD4D52B003897E3 /* libz.1.1.3.dylib */,
+				21EEE9BE1AD4D523003897E3 /* MobileCoreServices.framework */,
+				21EEE9BC1AD4D51C003897E3 /* QuartzCore.framework */,
+				21EEE9BA1AD4D516003897E3 /* Security.framework */,
+				21EEE9B81AD4D511003897E3 /* StoreKit.framework */,
+				21EEE9B61AD4D50A003897E3 /* SystemConfiguration.framework */,
+				21EEE9B41AD4D501003897E3 /* libsqlite3.dylib */,
+				21EEE9B21AD4D4F8003897E3 /* libz.dylib */,
+				21EEE9B01AD4D4ED003897E3 /* AVFoundation.framework */,
+				21EEE9AE1AD4D4B4003897E3 /* CoreMedia.framework */,
+				21EEE9AC1AD4D4AC003897E3 /* MediaPlayer.framework */,
+				21EEE9A91AD4D472003897E3 /* libxml2.dylib */,
+				21EEE9A71AD4D469003897E3 /* libstdc++.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21EEE9EE1AD5DD40003897E3 /* Intro Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE9751AD493C3003897E3 /* ViewController.h */,
+				21EEE9761AD493C3003897E3 /* ViewController.m */,
+				21EEE9941AD49479003897E3 /* PageContentViewController.h */,
+				21EEE9951AD49479003897E3 /* PageContentViewController.m */,
+				21EEE9A11AD49B0D003897E3 /* LoginViewController.h */,
+				21EEE9A21AD49B0D003897E3 /* LoginViewController.m */,
+				21EEE9A41AD49B1A003897E3 /* SignUpViewController.h */,
+				21EEE9A51AD49B1A003897E3 /* SignUpViewController.m */,
+			);
+			name = "Intro Scenes";
+			sourceTree = "<group>";
+		};
+		21EEE9EF1AD5DD84003897E3 /* App Setup */ = {
+			isa = PBXGroup;
+			children = (
+				21EEE96F1AD493C3003897E3 /* AppDelegate.h */,
+				21EEE9701AD493C3003897E3 /* AppDelegate.m */,
+			);
+			name = "App Setup";
+			sourceTree = "<group>";
+		};
+		21EEE9F11AD5DDB5003897E3 /* Actual App */ = {
+			isa = PBXGroup;
+			children = (
+				2126B2C31ADB1BF500F69ECC /* Music Recognition Files */,
+				21EEEA0C1ADA463B003897E3 /* Importing Contacts Files */,
+				21EEEA0B1ADA45EC003897E3 /* iTunesSearch Files */,
+			);
+			name = "Actual App";
+			sourceTree = "<group>";
+		};
+		21EEEA0B1ADA45EC003897E3 /* iTunesSearch Files */ = {
+			isa = PBXGroup;
+			children = (
+				21EEEA031ADA1000003897E3 /* SongInfo.h */,
+				21EEEA041ADA1000003897E3 /* SongInfo.m */,
+				21EEE9F21AD65EB0003897E3 /* ITunesSearchResultsTableViewController.h */,
+				21EEE9F31AD65EB0003897E3 /* ITunesSearchResultsTableViewController.m */,
+				21EEE9FA1AD71EDF003897E3 /* ITunesAPIController.h */,
+				21EEE9FB1AD71EDF003897E3 /* ITunesAPIController.m */,
+				21EEEA001AD9F1C0003897E3 /* ITunesSongInfoViewController.h */,
+				21EEEA011AD9F1C0003897E3 /* ITunesSongInfoViewController.m */,
+				21EEE9F71AD69551003897E3 /* CustomiTunesSearchTableViewCell.h */,
+				21EEE9F81AD69551003897E3 /* CustomiTunesSearchTableViewCell.m */,
+				21EEE9F51AD6947A003897E3 /* CustomiTunesSearchTableViewCell.xib */,
+			);
+			name = "iTunesSearch Files";
+			sourceTree = "<group>";
+		};
+		21EEEA0C1ADA463B003897E3 /* Importing Contacts Files */ = {
+			isa = PBXGroup;
+			children = (
+				21EEEA081ADA45DF003897E3 /* AddNewFriendsViewController.h */,
+				21EEEA091ADA45DF003897E3 /* AddNewFriendsViewController.m */,
+			);
+			name = "Importing Contacts Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +403,7 @@
 				TargetAttributes = {
 					21EEE9671AD493C3003897E3 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = W7AK4VMJ4M;
 					};
 					21EEE9831AD493C3003897E3 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -203,8 +436,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				21EEE97A1AD493C3003897E3 /* Main.storyboard in Resources */,
+				21EEE9F61AD6947A003897E3 /* CustomiTunesSearchTableViewCell.xib in Resources */,
+				21EEE99A1AD4990F003897E3 /* page1.png in Resources */,
+				21EEE9981AD49577003897E3 /* Button.png in Resources */,
 				21EEE97F1AD493C3003897E3 /* LaunchScreen.xib in Resources */,
 				21EEE97C1AD493C3003897E3 /* Images.xcassets in Resources */,
+				2126B2B61ADB115B00F69ECC /* PythonTestFile.py in Resources */,
+				21EEE9A01AD49923003897E3 /* page4.png in Resources */,
+				21EEE99C1AD49915003897E3 /* page2.png in Resources */,
+				21EEE99E1AD4991C003897E3 /* page3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,10 +462,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21EEE9FC1AD71EDF003897E3 /* ITunesAPIController.m in Sources */,
+				21EEEA021AD9F1C0003897E3 /* ITunesSongInfoViewController.m in Sources */,
+				21EEEA0A1ADA45DF003897E3 /* AddNewFriendsViewController.m in Sources */,
 				21EEE9711AD493C3003897E3 /* AppDelegate.m in Sources */,
 				21EEE9741AD493C3003897E3 /* TunesCloud.xcdatamodeld in Sources */,
+				21EEE9A31AD49B0D003897E3 /* LoginViewController.m in Sources */,
+				21EEE9F91AD69551003897E3 /* CustomiTunesSearchTableViewCell.m in Sources */,
+				21EEE9961AD49479003897E3 /* PageContentViewController.m in Sources */,
 				21EEE9771AD493C3003897E3 /* ViewController.m in Sources */,
+				21EEEA051ADA1000003897E3 /* SongInfo.m in Sources */,
+				21EEE9A61AD49B1A003897E3 /* SignUpViewController.m in Sources */,
 				21EEE96E1AD493C3003897E3 /* main.m in Sources */,
+				21EEE9F41AD65EB0003897E3 /* ITunesSearchResultsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +533,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.parsePush.tunesCloud";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: com.parsePush.tunesCloud";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -304,6 +554,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "87596c50-574b-4223-979c-19aedcbfe086";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -325,7 +576,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.parsePush.tunesCloud";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: com.parsePush.tunesCloud";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -338,6 +590,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "87596c50-574b-4223-979c-19aedcbfe086";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -346,20 +599,34 @@
 		21EEE98F1AD493C3003897E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "/Users/nishanth/Downloads/parse-library-1";
 				INFOPLIST_FILE = TunesCloud/Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		21EEE9901AD493C3003897E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "/Users/nishanth/Downloads/parse-library-1";
 				INFOPLIST_FILE = TunesCloud/Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -367,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -378,6 +646,7 @@
 				INFOPLIST_FILE = TunesCloudTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TunesCloud.app/TunesCloud";
 			};
 			name = Debug;
@@ -386,6 +655,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -393,6 +663,7 @@
 				INFOPLIST_FILE = TunesCloudTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TunesCloud.app/TunesCloud";
 			};
 			name = Release;
@@ -416,6 +687,7 @@
 				21EEE9901AD493C3003897E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21EEE9911AD493C3003897E3 /* Build configuration list for PBXNativeTarget "TunesCloudTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +696,7 @@
 				21EEE9931AD493C3003897E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

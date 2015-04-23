@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) UIPageViewController *pageViewController;
+
+- (IBAction)loginButtonPressed:(UIButton *)sender;
+- (IBAction)signUpButtonPressed:(UIButton *)sender;
 
 @end
 

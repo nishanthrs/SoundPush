@@ -4,9 +4,12 @@
 //
 //  Created by Nishanth Salinamakki on 4/7/15.
 //  Copyright (c) 2015 Nishanth Salinamakki. All rights reserved.
-//
+// Fix loginViewController screen; don't allow segue unless info is correct!
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+//#import <FBSDKCoreKit/FBSDKCoreKit.h>
+//#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface AppDelegate ()
 
@@ -14,10 +17,59 @@
 
 @implementation AppDelegate
 
+//- (void)applicationDidBecomeActive:(UIApplication *)application {
+//    [FBSDKAppEvents activateApp];
+//}
+//
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+//    return [[FBSDKApplicationDelegate sharedInstance] application:application
+//                                                          openURL:url
+//                                                sourceApplication:sourceApplication
+//                                                       annotation:annotation];
+//}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //Page Customization Settings
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor cyanColor];
+    pageControl.backgroundColor = [UIColor clearColor];
+    
+    //Navigation Bar Customization Settings
+    [[UINavigationBar appearance] setOpaque: NO];
+    [[UINavigationBar appearance] setBarTintColor: [UIColor cyanColor]];
+    //UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame: CGRectMake(0,0,320,50)];
+    //UINavigationBar.boundsnavigationBar.bounds = CGRectMake(0,0,320,100);
+    
+    //Setup Parse
+    [Parse setApplicationId:@"uoM5xJKL19t2PaTOqBw7GrZR5TdhNjdSRa8PM9DC"
+                  clientKey:@"Q2PB4GEcuomXNY6ARDDNIg4yuIEp97gbnMVrOgQ4"];
+    
+    //Track statistics (how many times application is opened)
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    // Register for Push Notitications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -32,16 +84,6 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    // Saves changes in the application's managed object context before the application terminates.
-    [self saveContext];
 }
 
 #pragma mark - Core Data stack
