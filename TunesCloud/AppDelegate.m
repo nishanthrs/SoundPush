@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
-//#import <FBSDKCoreKit/FBSDKCoreKit.h>
-//#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface AppDelegate ()
 
@@ -17,16 +17,19 @@
 
 @implementation AppDelegate
 
-//- (void)applicationDidBecomeActive:(UIApplication *)application {
-//    [FBSDKAppEvents activateApp];
-//}
-//
-//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-//    return [[FBSDKApplicationDelegate sharedInstance] application:application
-//                                                          openURL:url
-//                                                sourceApplication:sourceApplication
-//                                                       annotation:annotation];
-//}
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [FBSDKAppEvents activateApp];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -37,8 +40,8 @@
     pageControl.backgroundColor = [UIColor clearColor];
     
     //Navigation Bar Customization Settings
-    [[UINavigationBar appearance] setOpaque: NO];
-    [[UINavigationBar appearance] setBarTintColor: [UIColor cyanColor]];
+    //[[UINavigationBar appearance] setOpaque: NO];
+    //[[UINavigationBar appearance] setBarTintColor: [UIColor cyanColor]];
     //UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame: CGRectMake(0,0,320,50)];
     //UINavigationBar.boundsnavigationBar.bounds = CGRectMake(0,0,320,100);
     
@@ -58,7 +61,8 @@
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
     
-    return YES;
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                    didFinishLaunchingWithOptions:launchOptions];
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {

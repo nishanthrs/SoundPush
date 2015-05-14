@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
 @interface LoginViewController : UIViewController <UITextFieldDelegate>
 
@@ -14,5 +15,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 
 - (IBAction)loginButtonPressed:(UIButton *)sender;
+- (IBAction)forgotPasswordButtonPressed:(UIButton *)sender;
 
 @end

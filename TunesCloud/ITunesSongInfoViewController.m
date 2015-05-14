@@ -7,6 +7,7 @@
 //
 
 #import "ITunesSongInfoViewController.h"
+#import "SelectGroupTableViewController.h"
 #import <Parse/Parse.h>
 
 @interface ITunesSongInfoViewController ()
@@ -80,6 +81,9 @@
         }
     }];
     NSLog(@"%@", self.songPost);
+    
+    SelectGroupTableViewController *nextViewController = [[SelectGroupTableViewController alloc] init];
+    self.songPost = nextViewController.sharedSong;
 }
 
 @end

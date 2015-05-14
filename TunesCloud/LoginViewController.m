@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 //#import <ParseFacebookUtils/PFFacebookUtils.h>
 //#import <FBSDKCoreKit/FBSDKCoreKit.h>
 //#import <FBSDKLoginKit/FBSDKLoginKit.h>
@@ -26,6 +28,7 @@
     // Do any additional setup after loading the view.
     
     PFUser *user = [PFUser currentUser];
+    //Automatic login
     if (user) {
         [self performSegueWithIdentifier: @"appEntrySegue1" sender: self];
     }
@@ -36,10 +39,9 @@
     self.incorrectLoginAlertView = [[UIAlertView alloc] initWithTitle: @"Login Unsuccessful!" message: @"Make sure all your info is correct!" delegate: nil cancelButtonTitle: @"Try Again" otherButtonTitles: nil, nil];
     self.incorrectFacebookLoginAlertView = [[UIAlertView alloc] initWithTitle: @"Facebook Login Unsuccessful!" message: @"There was an error logging in with Facebook" delegate: nil cancelButtonTitle: @"Try again" otherButtonTitles: nil, nil];
     
-//    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-//    loginButton.center = self.view.center;
-//    [self.view addSubview:loginButton];
-    
+    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    loginButton.center = self.view.center;
+    [self.view addSubview:loginButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,6 +76,11 @@
         }
     }];
      
+}
+
+- (IBAction)forgotPasswordButtonPressed:(UIButton *)sender {
+    //NSString *emailTitle = @"Retrieve your Password!";
+    //NSString *messageBody = @"
 }
 
 //- (IBAction)facebookLoginButtonPressed:(UIButton *)sender {

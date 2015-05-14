@@ -181,6 +181,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzs-jz-r3l">
+                                <rect key="frame" x="92" y="468" width="137" height="39"/>
+                                <state key="normal" image="Button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgotPasswordButtonPressed:" destination="P27-MX-0YQ" eventType="touchUpInside" id="oEe-Cm-dAS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot Password?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGG-SC-7fd">
+                                <rect key="frame" x="115" y="477" width="100" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -225,15 +240,214 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="1X4-GI-hMP" kind="relationship" relationship="viewControllers" id="God-2j-3kc"/>
-                        <segue destination="FoU-4i-le5" kind="relationship" relationship="viewControllers" id="A9x-ER-ZP0"/>
-                        <segue destination="mrn-M3-QTl" kind="relationship" relationship="viewControllers" id="KMw-BV-4ll"/>
                         <segue destination="Esl-OJ-LgJ" kind="relationship" relationship="viewControllers" id="HyY-6W-2Kd"/>
+                        <segue destination="1X4-GI-hMP" kind="relationship" relationship="viewControllers" id="God-2j-3kc"/>
+                        <segue destination="ikG-do-RLu" kind="relationship" relationship="viewControllers" id="pPI-L6-k6y"/>
+                        <segue destination="mrn-M3-QTl" kind="relationship" relationship="viewControllers" id="KMw-BV-4ll"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPR-ud-kd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1578" y="-34"/>
+        </scene>
+        <!--Groups-->
+        <scene sceneID="l9E-Ua-W8G">
+            <objects>
+                <tableViewController id="Va6-HE-1kQ" customClass="GroupsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4rd-kB-kSU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="esk-Cw-pQy" detailTextLabel="iS2-qJ-2GV" style="IBUITableViewCellStyleSubtitle" id="cIF-Fb-Wco">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cIF-Fb-Wco" id="74t-LF-tDS">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="esk-Cw-pQy">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iS2-qJ-2GV">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ssd-GJ-0Kh" kind="push" id="PKm-TN-N5N"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Va6-HE-1kQ" id="Tjc-1V-CRv"/>
+                            <outlet property="delegate" destination="Va6-HE-1kQ" id="dDa-41-ccD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Groups" id="IMj-u6-QFh">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="6VY-3H-7RO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="V76-HE-b0G">
+                            <connections>
+                                <segue destination="kc4-OB-ZC4" kind="push" identifier="createMusicGroup" id="aNc-yc-gmK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5qm-HR-iOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2431" y="-287"/>
+        </scene>
+        <!--Individual Music Group Table View Controller-->
+        <scene sceneID="Jpg-AQ-CSy">
+            <objects>
+                <tableViewController id="Ssd-GJ-0Kh" customClass="IndividualMusicGroupTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" sectionHeaderHeight="22" sectionFooterHeight="22" id="F5Y-y6-pXP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="153" id="IRl-hf-IG0">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IRl-hf-IG0" id="2oN-qu-qSd">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aub-xQ-Zte">
+                                            <rect key="frame" x="14" y="8" width="81" height="80"/>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="104" contentMode="scaleToFill" fixedFrame="YES" text="User Description" translatesAutoresizingMaskIntoConstraints="NO" id="JXR-Uu-6HF">
+                                            <rect key="frame" x="14" y="96" width="298" height="49"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="12"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgj-1T-SNR">
+                                            <rect key="frame" x="108" y="8" width="194" height="25"/>
+                                            <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQU-tj-UF1">
+                                            <rect key="frame" x="108" y="37" width="194" height="21"/>
+                                            <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp8-Jt-dPs">
+                                            <rect key="frame" x="108" y="66" width="194" height="21"/>
+                                            <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ssd-GJ-0Kh" id="ZAE-62-7bC"/>
+                            <outlet property="delegate" destination="Ssd-GJ-0Kh" id="g9h-g2-wLu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="XB7-lI-0VU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fb7-WU-rPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2824" y="-287"/>
+        </scene>
+        <!--Select Group Table View Controller-->
+        <scene sceneID="Mj3-49-iFa">
+            <objects>
+                <tableViewController id="czF-Zk-84F" customClass="SelectGroupTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mdr-Ic-JcK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="N8v-rO-73P">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N8v-rO-73P" id="SSw-KV-tLy">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ssd-GJ-0Kh" kind="push" identifier="postToGroup" id="0jD-CD-HTk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="czF-Zk-84F" id="HH0-Hs-sCE"/>
+                            <outlet property="delegate" destination="czF-Zk-84F" id="y3j-n1-wSB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Bf7-i1-ZSc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfe-6S-1na" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2431" y="-1507"/>
+        </scene>
+        <!--Create Music Group View Controller-->
+        <scene sceneID="LoT-Pk-Kln">
+            <objects>
+                <viewController id="kc4-OB-ZC4" customClass="CreateMusicGroupViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gdp-Nt-DGR"/>
+                        <viewControllerLayoutGuide type="bottom" id="grG-QO-Ksw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ty4-n0-Pv3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVw-0U-gbR">
+                                <rect key="frame" x="46" y="186" width="229" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQq-cS-Hvs">
+                                <rect key="frame" x="46" y="157" width="74" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="352-Vs-8Ch">
+                                <rect key="frame" x="46" y="286" width="229" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music Genre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPz-km-GIp">
+                                <rect key="frame" x="46" y="257" width="74" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdW-9V-1ZF">
+                                <rect key="frame" x="86" y="380" width="165" height="42"/>
+                                <state key="normal" image="Button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Va6-HE-1kQ" kind="push" identifier="backToGroups" id="WUw-c3-JlH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Group" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsR-9q-PsP">
+                                <rect key="frame" x="119" y="390" width="110" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="inB-CP-cup"/>
+                    <connections>
+                        <outlet property="musicGenreNameTextField" destination="352-Vs-8Ch" id="H2P-0h-z43"/>
+                        <outlet property="musicGroupNameTextField" destination="EVw-0U-gbR" id="qaZ-DR-L4g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zX6-ie-SR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2824" y="-916"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6Za-zA-pKH">
@@ -316,7 +530,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qdt-Gp-ipT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1578" y="-1157"/>
+            <point key="canvasLocation" x="1578" y="-1507"/>
         </scene>
         <!--Song Info-->
         <scene sceneID="PcQ-a6-fyG">
@@ -356,6 +570,7 @@
                                 </state>
                                 <connections>
                                     <action selector="shareButtonPressed:" destination="gpY-oP-i24" eventType="touchUpInside" id="dZQ-EJ-nyA"/>
+                                    <segue destination="czF-Zk-84F" kind="push" id="Cs6-hT-16i"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC6-NU-f0q">
@@ -387,27 +602,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UzX-rd-x5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2007" y="-1157"/>
-        </scene>
-        <!--Groups-->
-        <scene sceneID="xqj-RX-fc7">
-            <objects>
-                <viewController id="FoU-4i-le5" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GU6-nD-ebj"/>
-                        <viewControllerLayoutGuide type="bottom" id="BMl-x0-INJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xlH-rz-xXm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Groups" id="Uus-sa-wyH"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bre-ke-kFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2020" y="-483"/>
+            <point key="canvasLocation" x="1996" y="-1507"/>
         </scene>
         <!--Page Content View Controller-->
         <scene sceneID="dI5-ZL-Ikc">
@@ -466,6 +661,25 @@
             </objects>
             <point key="canvasLocation" x="292" y="294"/>
         </scene>
+        <!--Groups-->
+        <scene sceneID="M1Q-hZ-irP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ikG-do-RLu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Groups" id="xCv-py-Qq2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="smC-mz-Ghb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Va6-HE-1kQ" kind="relationship" relationship="rootViewController" id="7Z3-iX-Fow"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ael-Ig-ama" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2007" y="-287"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Button.png" width="165" height="48"/>
@@ -477,5 +691,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="mrI-0z-njT"/>
+        <segue reference="0jD-CD-HTk"/>
+        <segue reference="WUw-c3-JlH"/>
     </inferredMetricsTieBreakers>
 </document>

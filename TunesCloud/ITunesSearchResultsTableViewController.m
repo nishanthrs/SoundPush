@@ -7,7 +7,7 @@
 //
 
 #import "ITunesSearchResultsTableViewController.h"
-#import "CustomiTunesSearchTableViewCell.h"
+//#import "CustomiTunesSearchTableViewCell.h"
 #import "ITunesAPIController.h"
 #import "ITunesSongInfoViewController.h"
 #import "SongInfo.h"
@@ -31,13 +31,8 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    //[self searchiTunesFor: @"Maroon 5"];
     self.iTunesAPI = [[ITunesAPIController alloc] init];
     self.iTunesAPI.delegate = self;
-    //[self.iTunesAPI searchiTunesFor: @"Maroon 5"];
-    //NSLog(@"ROWS IS %d", [self.tableData count]);
 }
 
 #pragma mark - Delegate method implementation
