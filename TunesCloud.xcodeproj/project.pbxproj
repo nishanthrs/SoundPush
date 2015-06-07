@@ -13,7 +13,6 @@
 		2126B2AA1ADAF50F00F69ECC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2126B2A91ADAF50F00F69ECC /* Bolts.framework */; };
 		2126B2AE1ADAF54800F69ECC /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2126B2AD1ADAF54800F69ECC /* ParseCrashReporting.framework */; };
 		2126B2B01ADAF55B00F69ECC /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2126B2AF1ADAF55B00F69ECC /* ParseUI.framework */; };
-		2126B2B61ADB115B00F69ECC /* PythonTestFile.py in Resources */ = {isa = PBXBuildFile; fileRef = 2126B2B51ADB115B00F69ECC /* PythonTestFile.py */; };
 		217E87D31B02563100FDDAF8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E87D21B02563100FDDAF8 /* GroupsTableViewController.m */; };
 		217E880F1B03C0F700FDDAF8 /* CreateMusicGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E880E1B03C0F700FDDAF8 /* CreateMusicGroupViewController.m */; };
 		217E88151B04705B00FDDAF8 /* MusicGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E88141B04705B00FDDAF8 /* MusicGroup.m */; };
@@ -22,6 +21,13 @@
 		217E881C1B04825B00FDDAF8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217E881B1B04825B00FDDAF8 /* FBSDKLoginKit.framework */; };
 		217E881E1B04826F00FDDAF8 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217E881D1B04826F00FDDAF8 /* FBSDKShareKit.framework */; };
 		217E88211B04899300FDDAF8 /* SelectGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E88201B04899300FDDAF8 /* SelectGroupTableViewController.m */; };
+		217E88241B0CEBC500FDDAF8 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E88231B0CEBC500FDDAF8 /* ForgotPasswordViewController.m */; };
+		217E882F1B0D497200FDDAF8 /* FriendsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E882E1B0D497200FDDAF8 /* FriendsListTableViewController.m */; };
+		217E88311B0D4C3300FDDAF8 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217E88301B0D4C3300FDDAF8 /* ParseFacebookUtils.framework */; };
+		217E88331B0D4C9400FDDAF8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217E88321B0D4C9400FDDAF8 /* FacebookSDK.framework */; };
+		217E88351B0D7C9600FDDAF8 /* button-buy-spotify.png in Resources */ = {isa = PBXBuildFile; fileRef = 217E88341B0D7C9600FDDAF8 /* button-buy-spotify.png */; };
+		217E88371B14D32800FDDAF8 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217E88361B14D32800FDDAF8 /* Spotify.framework */; };
+		217E883A1B162A4A00FDDAF8 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217E88391B162A4A00FDDAF8 /* UserProfileViewController.m */; };
 		21EEE96E1AD493C3003897E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE96D1AD493C3003897E3 /* main.m */; };
 		21EEE9711AD493C3003897E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9701AD493C3003897E3 /* AppDelegate.m */; };
 		21EEE9741AD493C3003897E3 /* TunesCloud.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21EEE9721AD493C3003897E3 /* TunesCloud.xcdatamodeld */; };
@@ -83,7 +89,6 @@
 		2126B2A91ADAF50F00F69ECC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../Downloads/parse-library-1/Bolts.framework"; sourceTree = "<group>"; };
 		2126B2AD1ADAF54800F69ECC /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../../../../Downloads/parse-library-1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
 		2126B2AF1ADAF55B00F69ECC /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../../Downloads/parse-library-1/ParseUI.framework"; sourceTree = "<group>"; };
-		2126B2B51ADB115B00F69ECC /* PythonTestFile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PythonTestFile.py; sourceTree = "<group>"; };
 		217E87D11B02563100FDDAF8 /* GroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupsTableViewController.h; sourceTree = "<group>"; };
 		217E87D21B02563100FDDAF8 /* GroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupsTableViewController.m; sourceTree = "<group>"; };
 		217E880D1B03C0F700FDDAF8 /* CreateMusicGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateMusicGroupViewController.h; sourceTree = "<group>"; };
@@ -97,6 +102,16 @@
 		217E881D1B04826F00FDDAF8 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		217E881F1B04899300FDDAF8 /* SelectGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectGroupTableViewController.h; sourceTree = "<group>"; };
 		217E88201B04899300FDDAF8 /* SelectGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectGroupTableViewController.m; sourceTree = "<group>"; };
+		217E88221B0CEBC500FDDAF8 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		217E88231B0CEBC500FDDAF8 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
+		217E882D1B0D497200FDDAF8 /* FriendsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListTableViewController.h; sourceTree = "<group>"; };
+		217E882E1B0D497200FDDAF8 /* FriendsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListTableViewController.m; sourceTree = "<group>"; };
+		217E88301B0D4C3300FDDAF8 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		217E88321B0D4C9400FDDAF8 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		217E88341B0D7C9600FDDAF8 /* button-buy-spotify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-buy-spotify.png"; sourceTree = "<group>"; };
+		217E88361B14D32800FDDAF8 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
+		217E88381B162A4A00FDDAF8 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
+		217E88391B162A4A00FDDAF8 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
 		21EEE9681AD493C3003897E3 /* TunesCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TunesCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EEE96C1AD493C3003897E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21EEE96D1AD493C3003897E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -174,6 +189,7 @@
 				2126B2AE1ADAF54800F69ECC /* ParseCrashReporting.framework in Frameworks */,
 				2126B2AA1ADAF50F00F69ECC /* Bolts.framework in Frameworks */,
 				2126B2A81ADAF4E900F69ECC /* Parse.framework in Frameworks */,
+				217E88311B0D4C3300FDDAF8 /* ParseFacebookUtils.framework in Frameworks */,
 				2126B29F1ADAF20000F69ECC /* Social.framework in Frameworks */,
 				2126B29D1ADAF1E000F69ECC /* Accounts.framework in Frameworks */,
 				21EEE9CD1AD4D554003897E3 /* UIKit.framework in Frameworks */,
@@ -184,6 +200,7 @@
 				21EEE9C31AD4D531003897E3 /* CoreLocation.framework in Frameworks */,
 				21EEE9C11AD4D52B003897E3 /* libz.1.1.3.dylib in Frameworks */,
 				21EEE9BF1AD4D523003897E3 /* MobileCoreServices.framework in Frameworks */,
+				217E88331B0D4C9400FDDAF8 /* FacebookSDK.framework in Frameworks */,
 				21EEE9BD1AD4D51C003897E3 /* QuartzCore.framework in Frameworks */,
 				21EEE9BB1AD4D516003897E3 /* Security.framework in Frameworks */,
 				21EEE9B91AD4D511003897E3 /* StoreKit.framework in Frameworks */,
@@ -194,6 +211,7 @@
 				21EEE9AF1AD4D4B4003897E3 /* CoreMedia.framework in Frameworks */,
 				21EEE9AA1AD4D472003897E3 /* libxml2.dylib in Frameworks */,
 				21EEE9A81AD4D469003897E3 /* libstdc++.dylib in Frameworks */,
+				217E88371B14D32800FDDAF8 /* Spotify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,16 +241,26 @@
 				217E87D21B02563100FDDAF8 /* GroupsTableViewController.m */,
 				217E880D1B03C0F700FDDAF8 /* CreateMusicGroupViewController.h */,
 				217E880E1B03C0F700FDDAF8 /* CreateMusicGroupViewController.m */,
+				217E881F1B04899300FDDAF8 /* SelectGroupTableViewController.h */,
+				217E88201B04899300FDDAF8 /* SelectGroupTableViewController.m */,
 				217E88161B047B0B00FDDAF8 /* IndividualMusicGroupTableViewController.h */,
 				217E88171B047B0B00FDDAF8 /* IndividualMusicGroupTableViewController.m */,
 			);
 			name = "Creating Groups Files";
 			sourceTree = "<group>";
 		};
+		217E883B1B162A5C00FDDAF8 /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				217E88381B162A4A00FDDAF8 /* UserProfileViewController.h */,
+				217E88391B162A4A00FDDAF8 /* UserProfileViewController.m */,
+			);
+			name = "User Profile";
+			sourceTree = "<group>";
+		};
 		21EEE95F1AD493C3003897E3 = {
 			isa = PBXGroup;
 			children = (
-				2126B2B51ADB115B00F69ECC /* PythonTestFile.py */,
 				21EEE96A1AD493C3003897E3 /* TunesCloud */,
 				21EEE9871AD493C3003897E3 /* TunesCloudTests */,
 				21EEE9691AD493C3003897E3 /* Products */,
@@ -252,6 +280,7 @@
 		21EEE96A1AD493C3003897E3 /* TunesCloud */ = {
 			isa = PBXGroup;
 			children = (
+				217E883B1B162A5C00FDDAF8 /* User Profile */,
 				21EEE9EF1AD5DD84003897E3 /* App Setup */,
 				21EEE9EE1AD5DD40003897E3 /* Intro Scenes */,
 				21EEE9F11AD5DDB5003897E3 /* Actual App */,
@@ -267,6 +296,7 @@
 		21EEE96B1AD493C3003897E3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				217E88341B0D7C9600FDDAF8 /* button-buy-spotify.png */,
 				21EEE99F1AD49923003897E3 /* page4.png */,
 				21EEE99D1AD4991C003897E3 /* page3.png */,
 				21EEE99B1AD49915003897E3 /* page2.png */,
@@ -298,6 +328,9 @@
 		21EEE9AB1AD4D489003897E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				217E88361B14D32800FDDAF8 /* Spotify.framework */,
+				217E88321B0D4C9400FDDAF8 /* FacebookSDK.framework */,
+				217E88301B0D4C3300FDDAF8 /* ParseFacebookUtils.framework */,
 				217E881D1B04826F00FDDAF8 /* FBSDKShareKit.framework */,
 				217E881B1B04825B00FDDAF8 /* FBSDKLoginKit.framework */,
 				217E88191B04824300FDDAF8 /* FBSDKCoreKit.framework */,
@@ -346,6 +379,8 @@
 				21EEE9A21AD49B0D003897E3 /* LoginViewController.m */,
 				21EEE9A41AD49B1A003897E3 /* SignUpViewController.h */,
 				21EEE9A51AD49B1A003897E3 /* SignUpViewController.m */,
+				217E88221B0CEBC500FDDAF8 /* ForgotPasswordViewController.h */,
+				217E88231B0CEBC500FDDAF8 /* ForgotPasswordViewController.m */,
 			);
 			name = "Intro Scenes";
 			sourceTree = "<group>";
@@ -362,8 +397,6 @@
 		21EEE9F11AD5DDB5003897E3 /* Actual App */ = {
 			isa = PBXGroup;
 			children = (
-				217E881F1B04899300FDDAF8 /* SelectGroupTableViewController.h */,
-				217E88201B04899300FDDAF8 /* SelectGroupTableViewController.m */,
 				217E87D41B02563F00FDDAF8 /* Creating Groups Files */,
 				2126B2C31ADB1BF500F69ECC /* Music Recognition Files */,
 				21EEEA0C1ADA463B003897E3 /* Importing Contacts Files */,
@@ -395,6 +428,8 @@
 			children = (
 				21EEEA081ADA45DF003897E3 /* AddNewFriendsViewController.h */,
 				21EEEA091ADA45DF003897E3 /* AddNewFriendsViewController.m */,
+				217E882D1B0D497200FDDAF8 /* FriendsListTableViewController.h */,
+				217E882E1B0D497200FDDAF8 /* FriendsListTableViewController.m */,
 			);
 			name = "Importing Contacts Files";
 			sourceTree = "<group>";
@@ -483,10 +518,10 @@
 				21EEE97A1AD493C3003897E3 /* Main.storyboard in Resources */,
 				21EEE9F61AD6947A003897E3 /* CustomiTunesSearchTableViewCell.xib in Resources */,
 				21EEE99A1AD4990F003897E3 /* page1.png in Resources */,
+				217E88351B0D7C9600FDDAF8 /* button-buy-spotify.png in Resources */,
 				21EEE9981AD49577003897E3 /* Button.png in Resources */,
 				21EEE97F1AD493C3003897E3 /* LaunchScreen.xib in Resources */,
 				21EEE97C1AD493C3003897E3 /* Images.xcassets in Resources */,
-				2126B2B61ADB115B00F69ECC /* PythonTestFile.py in Resources */,
 				21EEE9A01AD49923003897E3 /* page4.png in Resources */,
 				21EEE99C1AD49915003897E3 /* page2.png in Resources */,
 				21EEE99E1AD4991C003897E3 /* page3.png in Resources */,
@@ -509,15 +544,18 @@
 			files = (
 				21EEE9FC1AD71EDF003897E3 /* ITunesAPIController.m in Sources */,
 				217E88181B047B0B00FDDAF8 /* IndividualMusicGroupTableViewController.m in Sources */,
+				217E882F1B0D497200FDDAF8 /* FriendsListTableViewController.m in Sources */,
 				21EEEA021AD9F1C0003897E3 /* ITunesSongInfoViewController.m in Sources */,
 				21EEEA0A1ADA45DF003897E3 /* AddNewFriendsViewController.m in Sources */,
 				21EEE9711AD493C3003897E3 /* AppDelegate.m in Sources */,
+				217E883A1B162A4A00FDDAF8 /* UserProfileViewController.m in Sources */,
 				21EEE9741AD493C3003897E3 /* TunesCloud.xcdatamodeld in Sources */,
 				217E88151B04705B00FDDAF8 /* MusicGroup.m in Sources */,
 				217E87D31B02563100FDDAF8 /* GroupsTableViewController.m in Sources */,
 				21EEE9A31AD49B0D003897E3 /* LoginViewController.m in Sources */,
 				21EEE9F91AD69551003897E3 /* CustomiTunesSearchTableViewCell.m in Sources */,
 				217E88211B04899300FDDAF8 /* SelectGroupTableViewController.m in Sources */,
+				217E88241B0CEBC500FDDAF8 /* ForgotPasswordViewController.m in Sources */,
 				217E880F1B03C0F700FDDAF8 /* CreateMusicGroupViewController.m in Sources */,
 				21EEE9961AD49479003897E3 /* PageContentViewController.m in Sources */,
 				21EEE9771AD493C3003897E3 /* ViewController.m in Sources */,
@@ -657,11 +695,18 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"/Users/nishanth/Downloads/parse-library-1",
 					/Users/nishanth/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
+					/Users/nishanth/Documents/Spotify,
+					iOS,
+					8,
+					SDK,
+					/Users/nishanth/Documents,
 				);
 				INFOPLIST_FILE = TunesCloud/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -678,11 +723,18 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"/Users/nishanth/Downloads/parse-library-1",
 					/Users/nishanth/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
+					/Users/nishanth/Documents/Spotify,
+					iOS,
+					8,
+					SDK,
+					/Users/nishanth/Documents,
 				);
 				INFOPLIST_FILE = TunesCloud/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

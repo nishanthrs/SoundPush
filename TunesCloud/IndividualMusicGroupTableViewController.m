@@ -17,7 +17,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"%@", self.sharedSong[@"songName"]);
+    self.songPosts = [[NSArray alloc] init];
+    
+    NSLog(@"THE MUSIC GROUP NAME IS %@", self.musicGroupName);
+    
+    PFQuery *query = [PFQuery queryWithClassName: @"SongPost"];
+    //[query whereKey: @"groupName" equalTo: self.musicGroupName];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSLog(@"NO ERROR IN QUERYING OBJECT!");
+            for (PFObject *object in objects) {
+                self.sharedSong = [objects objectAtIndex: [objects count] - 1];
+                self.songPosts = [[NSArray alloc] initWithArray: objects];
+                [self.tableView reloadData];
+            }
+        }
+        else {
+            NSLog(@"Object Query Error");
+        }
+    }];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -45,18 +64,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Cell" forIndexPath:indexPath];
     
-    NSString *urlString = self.sharedSong[@"artworkUrl60"];
+    PFObject *songPost = [self.songPosts objectAtIndex: indexPath.row];
+    
+    NSString *urlString = songPost[@"artworkUrl60"];
     NSURL *imageURL = [NSURL URLWithString: urlString];
     NSData *imageData = [[NSData alloc] initWithContentsOfURL: imageURL];
-    
     UIImageView *songCoverArtImageView = (UIImageView *) [cell viewWithTag: 100];
     songCoverArtImageView.image = [UIImage imageWithData: imageData];
     UILabel *songNameLabel = (UILabel *) [cell viewWithTag: 101];
-    songNameLabel.text = self.sharedSong[@"songName"];
+    songNameLabel.text = songPost[@"songName"];
     UILabel *songArtistNameLabel = (UILabel *) [cell viewWithTag: 102];
-    songArtistNameLabel.text = self.sharedSong[@"artistName"];
+    songArtistNameLabel.text = songPost[@"songArtist"];
     UILabel *songAlbumNameLabel = (UILabel *) [cell viewWithTag: 103];
-    songAlbumNameLabel.text = self.sharedSong[@"collectionName"];
+    songAlbumNameLabel.text = songPost[@"albumName"];
     
     return cell;
 }

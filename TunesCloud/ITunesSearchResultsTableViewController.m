@@ -7,7 +7,6 @@
 //
 
 #import "ITunesSearchResultsTableViewController.h"
-//#import "CustomiTunesSearchTableViewCell.h"
 #import "ITunesAPIController.h"
 #import "ITunesSongInfoViewController.h"
 #import "SongInfo.h"
@@ -134,6 +133,7 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *songData = self.tableData[indexPath.row];
     NSString *songName = songData[@"trackName"];
+    NSString *artistName = songData[@"artistName"];
     NSString *songAlbum = songData[@"collectionName"];
     NSString *songGenre = songData[@"primaryGenreName"];
     NSString *songPreviewURL = songData[@"previewUrl"];
@@ -150,19 +150,21 @@
     //[sender setTitle: @"Stop" forState: UIControlStateNormal];
     //}
     
-    NSString *songInfo = [NSString stringWithFormat: @"This is the song info: %@, %@, %@", songName, songAlbum, songGenre];
-    
     ITunesSongInfoViewController *nextViewController = [[ITunesSongInfoViewController alloc] init];
-    SongInfo *allSongInformation = [[SongInfo alloc] initWithSongInfo: songName andAlbum: songAlbum andGenre: songGenre andCoverArt:songCoverArt andPreviewURL: songPreviewURL];
+    SongInfo *allSongInformation = [[SongInfo alloc] initWithSongInfo: songName andArtist: artistName andAlbum: songAlbum andGenre: songGenre andCoverArt:songCoverArt andPreviewURL: songPreviewURL];
     nextViewController.songInformation = allSongInformation;
-//    nextViewController.songInformation.songName = songName;
-//    nextViewController.songInformation.albumName = songAlbum;
-//    nextViewController.songInformation.genreName = songGenre;
-//    nextViewController.songInformation.songCoverArt = songCoverArt;
     
-    //NSLog(@"%@", songName);
-    UIAlertView *songInfoAlertView = [[UIAlertView alloc] initWithTitle: @"Song Information" message: songInfo delegate: nil cancelButtonTitle: @"Ok" otherButtonTitles: nil, nil];
-    [songInfoAlertView show];
+    //NSString *songInfo = [NSString stringWithFormat: @"This is the song info: %@, %@, %@", songName, songAlbum, songGenre];
+    //UIAlertView *songInfoAlertView = [[UIAlertView alloc] initWithTitle: @"Song Information" message: songInfo delegate: nil cancelButtonTitle: @"Ok" otherButtonTitles: nil, nil];
+    //[songInfoAlertView show];
+    
+    NSError *error = nil;
+    SPTPartialTrack *songSpotifyTrack = [[SPTPartialTrack alloc] initWithDecodedJSONObject: songData error: &error];
+    SPTTrack *songSpotifyFullTrack = [[SPTTrack alloc] initWithDecodedJSONObject: songData error: &error];
+    NSLog(@"THE SONG POPULARITY IS %f", songSpotifyFullTrack.popularity);
+    NSLog(@"THE SPOTIFY URI IS %@", songSpotifyTrack.previewURL);
+    
+    //NSLog(@"The song's name is %@", selectedTrack.name);
     
     //[self performSegueWithIdentifier: @"songInfoSegue" sender: self];
 }
@@ -170,17 +172,15 @@
 #pragma mark - Navigation
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"%@", sender);
     if ([sender isKindOfClass: [UITableViewCell class]]) {
         if ([segue.destinationViewController isKindOfClass: [ITunesSongInfoViewController class]]) {
             if ([segue.identifier isEqualToString: @"songInfoSegue"]) {
-                //[self performSegueWithIdentifier: @"songInfoSegue" sender: self];
-                NSLog(@"AWESOME");
                 NSIndexPath *indexPath = [self.songSearchTableView indexPathForSelectedRow];
                 ITunesSongInfoViewController *nextViewController = segue.destinationViewController;
                 
                 NSDictionary *songData = self.tableData[indexPath.row];
                 NSString *songName = songData[@"trackName"];
+                NSString *songArtist = songData[@"artistName"];
                 NSString *songAlbum = songData[@"collectionName"];
                 NSString *songGenre = songData[@"primaryGenreName"];
                 NSString *songPreviewURL = songData[@"previewUrl"];
@@ -190,7 +190,7 @@
                 UIImageView *songCoverArtImageView = [[UIImageView alloc] initWithImage: [UIImage imageWithData: imageData]];
                 //songCoverArtImageView.image = [UIImage imageWithData: imageData];
                 //UIImageView *songCoverArt = [[UIImageView alloc] initWithImage: [UIImage imageWithData: [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: songData[@"artworkUrl60"]]]]];
-                SongInfo *allSongInformation = [[SongInfo alloc] initWithSongInfo : songName andAlbum : songAlbum andGenre : songGenre andCoverArt : songCoverArtImageView andPreviewURL: songPreviewURL];
+                SongInfo *allSongInformation = [[SongInfo alloc] initWithSongInfo : songName andArtist: songArtist andAlbum : songAlbum andGenre : songGenre andCoverArt : songCoverArtImageView andPreviewURL: songPreviewURL];
                 nextViewController.songInformation = allSongInformation;
                 if ([nextViewController.songInformation.songName isEqualToString: songName]) {
                     NSLog(@"%@", nextViewController.songInformation.songCoverArt);

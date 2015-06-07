@@ -9,6 +9,7 @@
 #import "ITunesSongInfoViewController.h"
 #import "SelectGroupTableViewController.h"
 #import <Parse/Parse.h>
+#import <Spotify/Spotify.h>
 
 @interface ITunesSongInfoViewController ()
 
@@ -22,6 +23,7 @@
     [self.navigationController setNavigationBarHidden: NO];
     
     self.songNameLabel.text = self.songInformation.songName;
+    self.artistNameLabel.text = self.songInformation.artistName;
     self.albumNameLabel.text = self.songInformation.albumName;
     self.songGenreLabel.text = self.songInformation.genreName;
     self.songCoverArtImageView.image = self.songInformation.songCoverArt.image;
@@ -42,12 +44,14 @@
 - (IBAction)previewButtonPressed:(UIButton *)sender {
     //[self.mediaPlayer stop];
     NSLog(@"The play URL of the song is %@", self.songInformation.previewURL);
-//    self.mediaPlayer = [[MPMoviePlayerController alloc] initWithContentURL: [NSURL URLWithString: self.songInformation.previewURL]];
-//    //[self presentMoviePlayerViewControllerAnimated: self.mediaPlayer];
-//    [self.mediaPlayer play];
-    self.mediaPlayer = [[MPMoviePlayerViewController alloc] initWithContentURL: [NSURL URLWithString: self.songInformation.previewURL]];
-    [self presentMoviePlayerViewControllerAnimated: self.mediaPlayer];
-    [self.mediaPlayer.moviePlayer play];
+    self.audioPlayer = [[MPMoviePlayerController alloc] initWithContentURL: [NSURL URLWithString: self.songInformation.previewURL]];
+    [self.audioPlayer prepareToPlay];
+    
+    //[self presentMoviePlayerViewControllerAnimated: self.mediaPlayer];
+    [self.audioPlayer play];
+//    self.mediaPlayer = [[MPMoviePlayerViewController alloc] initWithContentURL: [NSURL URLWithString: self.songInformation.previewURL]];
+//    [self presentMoviePlayerViewControllerAnimated: self.mediaPlayer];
+//    [self.mediaPlayer.moviePlayer play];
     //[sender setTitle: @"Stop" forState: UIControlStateNormal];
 }
 
@@ -67,11 +71,12 @@
     }];
     
     self.songPost = [[PFObject alloc] initWithClassName: @"SongPost"];
-    //self.newSongPost[@"artistName"] = self.songInformation.songName;
     self.songPost[@"songName"] = self.songInformation.songName;
+    self.songPost[@"songArtist"] = self.songInformation.artistName;
     self.songPost[@"albumName"] = self.songInformation.albumName;
     self.songPost[@"songGenre"] = self.songInformation.genreName;
     self.songPost[@"coverArt"] = self.songCoverArtDataFromImage;
+    self.songPost[@"groupName"] = @"";
     [self.songPost saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"SONG SAVED SUCCESSFULLY!");
@@ -82,8 +87,12 @@
     }];
     NSLog(@"%@", self.songPost);
     
-    SelectGroupTableViewController *nextViewController = [[SelectGroupTableViewController alloc] init];
-    self.songPost = nextViewController.sharedSong;
+//    SelectGroupTableViewController *nextViewController = [[SelectGroupTableViewController alloc] init];
+//    self.songPost = nextViewController.sharedSong;
+}
+
+- (IBAction)openSpotifyLinkButtonPressed:(UIButton *)sender {
+
 }
 
 @end

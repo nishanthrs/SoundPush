@@ -12,7 +12,8 @@
 
 @interface IndividualMusicGroupTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSString *musicGroupName;
 @property (strong, nonatomic) PFObject *sharedSong;
-@property (strong, nonatomic) NSMutableArray *songPosts;
+@property (strong, nonatomic) NSArray *songPosts;
 
 @end

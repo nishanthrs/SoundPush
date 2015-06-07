@@ -9,6 +9,7 @@
 #import "SelectGroupTableViewController.h"
 #import "GroupsTableViewController.h"
 #import "IndividualMusicGroupTableViewController.h"
+#import <Parse/Parse.h>
 
 @interface SelectGroupTableViewController ()
 
@@ -22,7 +23,19 @@
     GroupsTableViewController *groupsTVC = [[GroupsTableViewController alloc] init];
     self.musicGroups = groupsTVC.musicGroups;
     
-    NSLog(@"%@", self.sharedSong[@"songName"]);
+//    PFQuery *query = [PFQuery queryWithClassName: @"SongPost"];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        if (!error) {
+//            NSLog(@"NO ERROR IN QUERYING OBJECT!");
+//            for (PFObject *object in objects) {
+//                self.sharedSong = [objects objectAtIndex: [objects count] - 1];
+//                [self.tableView reloadData];
+//            }
+//        }
+//        else {
+//            NSLog(@"Object Query Error");
+//        }
+//    }];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -108,14 +121,35 @@
 }
 */
 
+#pragma mark - Helper method for MusicGroup creation
+
+- (MusicGroup *) createMusicGroupWithName : (NSString *) groupName andMusicStyle : (NSString *) musicStyle {
+    id delegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [delegate managedObjectContext];
+    
+    MusicGroup *newMusicGroup = [NSEntityDescription insertNewObjectForEntityForName: @"MusicGroup" inManagedObjectContext: context];
+    newMusicGroup.musicGroupName = groupName;
+    newMusicGroup.musicStyle = musicStyle;
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"Error is %@", error);
+    }
+    
+    return newMusicGroup;
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.destinationViewController isKindOfClass: [IndividualMusicGroupTableViewController class]]) {
-        if ([segue.identifier isEqualToString: @"postToGroup"]) {
-            IndividualMusicGroupTableViewController *nextViewController = [[IndividualMusicGroupTableViewController alloc] init];
-            self.sharedSong = nextViewController.sharedSong;
+        if ([sender isKindOfClass: [UITableViewCell class]]) {
+            if ([segue.identifier isEqualToString: @"postToGroup"]) {
+                //IndividualMusicGroupTableViewController *nextViewController = [[IndividualMusicGroupTableViewController alloc] init];
+                //NSIndexPath *indexPath = [self.tableView indexPathForCell: sender];
+                
+            }
         }
     }
 }

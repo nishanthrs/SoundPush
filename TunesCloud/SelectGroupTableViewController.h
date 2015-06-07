@@ -14,7 +14,7 @@
 @interface SelectGroupTableViewController : UITableViewController
 
 @property (strong, nonatomic) MusicGroup *musicGroup;
-@property (strong, nonatomic) NSMutableArray *musicGroups;
+@property (strong, nonatomic) NSArray *musicGroups;
 @property (strong, nonatomic) PFObject *sharedSong;
 
 @end

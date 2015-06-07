@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "ITunesAPIController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import <Spotify/Spotify.h>
 
 @interface ITunesSearchResultsTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating, ITunesAPIControllerProtocol>
 

@@ -11,10 +11,15 @@
 
 @interface LoginViewController : UIViewController <UITextFieldDelegate>
 
+@property (nonatomic) BOOL facebookLogin;
+
 @property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
+
 - (IBAction)loginButtonPressed:(UIButton *)sender;
 - (IBAction)forgotPasswordButtonPressed:(UIButton *)sender;
+- (IBAction)facebookLoginButtonPressed:(UIButton *)sender;
 
 @end

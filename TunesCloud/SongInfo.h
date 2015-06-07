@@ -12,11 +12,12 @@
 @interface SongInfo : NSObject
 
 @property (strong, nonatomic) NSString *songName;
+@property (strong, nonatomic) NSString *artistName;
 @property (strong, nonatomic) NSString *albumName;
 @property (strong, nonatomic) NSString *genreName;
 @property (strong, nonatomic) UIImageView *songCoverArt;
 @property (strong, nonatomic) NSString *previewURL;
 
-- (id) initWithSongInfo : (NSString *) song andAlbum : (NSString *) album andGenre : (NSString *) genre andCoverArt : (UIImageView *) coverArt andPreviewURL : (NSString *) previewURLString;
+- (id) initWithSongInfo : (NSString *) song andArtist : (NSString *) artist andAlbum : (NSString *) album andGenre : (NSString *) genre andCoverArt : (UIImageView *) coverArt andPreviewURL : (NSString *) previewURLString;
 
 @end

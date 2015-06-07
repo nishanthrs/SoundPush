@@ -11,14 +11,15 @@
 @implementation SongInfo
 
 - (id) init {
-    self = [self initWithSongInfo: nil andAlbum: nil andGenre: nil andCoverArt: nil andPreviewURL: nil];
+    self = [self initWithSongInfo: nil andArtist: nil andAlbum: nil andGenre: nil andCoverArt: nil andPreviewURL: nil];
     return self;
 }
 
-- (id) initWithSongInfo:(NSString *)song andAlbum:(NSString *)album andGenre:(NSString *)genre andCoverArt:(UIImageView *)coverArt andPreviewURL:(NSString *)previewURLString {
+- (id) initWithSongInfo:(NSString *)song andArtist:(NSString *)artist andAlbum:(NSString *)album andGenre:(NSString *)genre andCoverArt:(UIImageView *)coverArt andPreviewURL:(NSString *)previewURLString {
     self = [super init];
     
     self.songName = song;
+    self.artistName = artist;
     self.albumName = album;
     self.genreName = genre;
     self.songCoverArt = coverArt;

@@ -18,15 +18,6 @@
     return self;
 }
 
-//- (id) initWithName:(NSString *)groupName andMusicStyle:(NSString *)musicStyle {
-//    self = [super init];
-//    
-//    self.musicGroupName = groupName;
-//    self.musicStyle = musicStyle;
-//    
-//    return self;
-//}
-
 - (NSString *) getMusicGroupName {
     return self.musicGroupName;
 }

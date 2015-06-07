@@ -10,8 +10,13 @@
 #import <Parse/Parse.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <Spotify/Spotify.h>
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) SPTSession *session;
+@property (nonatomic, strong) SPTAudioStreamingController *player;
 
 @end
 
@@ -19,16 +24,6 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     [FBSDKAppEvents activateApp];
-}
-
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation {
-    return [[FBSDKApplicationDelegate sharedInstance] application:application
-                                                          openURL:url
-                                                sourceApplication:sourceApplication
-                                                       annotation:annotation];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -44,6 +39,19 @@
     //[[UINavigationBar appearance] setBarTintColor: [UIColor cyanColor]];
     //UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame: CGRectMake(0,0,320,50)];
     //UINavigationBar.boundsnavigationBar.bounds = CGRectMake(0,0,320,100);
+    
+    //Setup Spotify API
+    [[SPTAuth defaultInstance] setClientID:@"c0463dd0951648b698440c30cf60ccef"];
+    [[SPTAuth defaultInstance] setRedirectURL:[NSURL URLWithString:@"sound-push-login://callback"]];
+    [[SPTAuth defaultInstance] setRequestedScopes:@[SPTAuthStreamingScope]];
+    
+//    // Construct a login URL and open it
+//    NSURL *loginURL = [[SPTAuth defaultInstance] loginURL];
+//    
+//    // Opening a URL in Safari close to application launch may trigger
+//    // an iOS bug, so we wait a bit before doing so.
+//    [application performSelector:@selector(openURL:)
+//                      withObject:loginURL afterDelay:0.1];
     
     //Setup Parse
     [Parse setApplicationId:@"uoM5xJKL19t2PaTOqBw7GrZR5TdhNjdSRa8PM9DC"
@@ -61,9 +69,59 @@
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
     
+    [PFFacebookUtils initializeFacebook];
+    
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                     didFinishLaunchingWithOptions:launchOptions];
 }
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    // Ask SPTAuth if the URL given is a Spotify authentication callback
+//    if ([[SPTAuth defaultInstance] canHandleURL:url]) {
+//        [[SPTAuth defaultInstance] handleAuthCallbackWithTriggeredAuthURL:url callback:^(NSError *error, SPTSession *session) {
+//            
+//            if (error != nil) {
+//                NSLog(@"*** Auth error: %@", error);
+//                return;
+//            }
+//            
+//            // Call the -playUsingSession: method to play a track
+//            [self playUsingSession:session];
+//        }];
+//        return YES;
+//    }
+    
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
+}
+
+//-(void)playUsingSession:(SPTSession *)session {
+//    
+//    // Create a new player if needed
+//    if (self.player == nil) {
+//        self.player = [[SPTAudioStreamingController alloc] initWithClientId:[SPTAuth defaultInstance].clientID];
+//    }
+//    
+//    [self.player loginWithSession:session callback:^(NSError *error) {
+//        if (error != nil) {
+//            NSLog(@"*** Logging in got error: %@", error);
+//            return;
+//        }
+//        
+//        NSURL *trackURI = [NSURL URLWithString:@"spotify:track:58s6EuEYJdlb0kO7awm3Vp"];
+//        [self.player playURIs:@[ trackURI ] fromIndex:0 callback:^(NSError *error) {
+//            if (error != nil) {
+//                NSLog(@"*** Starting playback got error: %@", error);
+//                return;
+//            }
+//        }];
+//    }];
+//}
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Store the deviceToken in the current installation and save it to Parse.

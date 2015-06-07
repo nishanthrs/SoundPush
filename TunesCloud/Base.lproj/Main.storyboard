@@ -131,6 +131,89 @@
             </objects>
             <point key="canvasLocation" x="1148" y="582"/>
         </scene>
+        <!--Friends List Table View Controller-->
+        <scene sceneID="cIx-uO-iIQ">
+            <objects>
+                <tableViewController id="FTn-1k-X7T" customClass="FriendsListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7FF-c7-PTk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ja9-tk-QWW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ja9-tk-QWW" id="mwW-GI-S9W">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FTn-1k-X7T" id="GtY-gj-aiX"/>
+                            <outlet property="delegate" destination="FTn-1k-X7T" id="Vkt-9i-YVO"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="1pJ-tc-xJS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OOt-LA-LjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1578" y="616"/>
+        </scene>
+        <!--Forgot Password View Controller-->
+        <scene sceneID="Aer-hJ-Oze">
+            <objects>
+                <viewController id="d3t-Oi-xZc" customClass="ForgotPasswordViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9PI-Bs-ffc"/>
+                        <viewControllerLayoutGuide type="bottom" id="W2a-rZ-E7K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lGe-Aq-76B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NRQ-Pa-TEI">
+                                <rect key="frame" x="53" y="216" width="205" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your email address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2c6-5z-YIr">
+                                <rect key="frame" x="62" y="119" width="186" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoQ-Cp-Z7n">
+                                <rect key="frame" x="53" y="187" width="89" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAT-JT-G0F">
+                                <rect key="frame" x="82" y="325" width="147" height="39"/>
+                                <state key="normal" image="Button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendEmailButtonPressed:" destination="d3t-Oi-xZc" eventType="touchUpInside" id="XV3-Jo-zvf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Send Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWi-bH-Yff">
+                                <rect key="frame" x="110" y="334" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gqy-5h-AAP"/>
+                    <connections>
+                        <outlet property="emailAddressTextField" destination="NRQ-Pa-TEI" id="TE8-GA-C8O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8c-4G-BGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734" y="-356"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="w6x-qj-flX">
             <objects>
@@ -166,7 +249,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBp-lE-9Vm">
-                                <rect key="frame" x="92" y="390" width="137" height="39"/>
+                                <rect key="frame" x="92" y="318" width="137" height="39"/>
                                 <state key="normal" image="Button.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -176,7 +259,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nB-i8-MP3">
-                                <rect key="frame" x="137" y="399" width="47" height="21"/>
+                                <rect key="frame" x="137" y="327" width="47" height="21"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -188,11 +271,28 @@
                                 </state>
                                 <connections>
                                     <action selector="forgotPasswordButtonPressed:" destination="P27-MX-0YQ" eventType="touchUpInside" id="oEe-Cm-dAS"/>
+                                    <segue destination="d3t-Oi-xZc" kind="push" identifier="forgotPasswordSegue" id="kc6-T8-pGf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot Password?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGG-SC-7fd">
                                 <rect key="frame" x="115" y="477" width="100" height="21"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xc4-wl-65G">
+                                <rect key="frame" x="92" y="389" width="137" height="42"/>
+                                <state key="normal" image="Button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookLoginButtonPressed:" destination="P27-MX-0YQ" eventType="touchUpInside" id="7Qc-Ij-enY"/>
+                                    <segue destination="Vyy-Ch-rIE" kind="push" identifier="fbSegue" id="aNS-TA-pD1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Facebook Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D7-QV-7RM">
+                                <rect key="frame" x="110" y="399" width="105" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -209,25 +309,6 @@
             </objects>
             <point key="canvasLocation" x="1152" y="-34"/>
         </scene>
-        <!--Add New Friends View Controller-->
-        <scene sceneID="AGa-mg-0bb">
-            <objects>
-                <viewController id="1X4-GI-hMP" customClass="AddNewFriendsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OLO-P8-EhT"/>
-                        <viewControllerLayoutGuide type="bottom" id="1M2-tU-7Fs"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5Oq-8a-yev">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="Bhm-1t-cjG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j6L-JO-D0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1578" y="645"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2Rd-ih-I6n">
             <objects>
@@ -241,8 +322,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="Esl-OJ-LgJ" kind="relationship" relationship="viewControllers" id="HyY-6W-2Kd"/>
-                        <segue destination="1X4-GI-hMP" kind="relationship" relationship="viewControllers" id="God-2j-3kc"/>
                         <segue destination="ikG-do-RLu" kind="relationship" relationship="viewControllers" id="pPI-L6-k6y"/>
+                        <segue destination="FTn-1k-X7T" kind="relationship" relationship="viewControllers" id="NwR-NB-lXg"/>
                         <segue destination="mrn-M3-QTl" kind="relationship" relationship="viewControllers" id="KMw-BV-4ll"/>
                     </connections>
                 </tabBarController>
@@ -449,10 +530,10 @@
             </objects>
             <point key="canvasLocation" x="2824" y="-916"/>
         </scene>
-        <!--View Controller-->
+        <!--Your Profile-->
         <scene sceneID="6Za-zA-pKH">
             <objects>
-                <viewController id="mrn-M3-QTl" sceneMemberID="viewController">
+                <viewController id="mrn-M3-QTl" customClass="UserProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0q6-1G-md4"/>
                         <viewControllerLayoutGuide type="bottom" id="iLo-eL-tRS"/>
@@ -460,10 +541,45 @@
                     <view key="view" contentMode="scaleToFill" id="2Vl-kN-RKw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfr-4s-5au">
+                                <rect key="frame" x="106" y="87" width="109" height="108"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song of the Moment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydi-fB-558">
+                                <rect key="frame" x="35" y="278" width="180" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Name and Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOy-fF-H6s">
+                                <rect key="frame" x="35" y="314" width="258" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQ9-lQ-Bz9">
+                                <rect key="frame" x="35" y="343" width="154" height="134"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sr-ex-o3F">
+                                <rect key="frame" x="35" y="228" width="258" height="30"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="0ZY-h7-EyS"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="0ZY-h7-EyS"/>
+                    <navigationItem key="navigationItem" title="Your Profile" id="PwF-z1-6d3">
+                        <barButtonItem key="rightBarButtonItem" title="Set Song" id="PlW-1c-UlW"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="favoriteSongLabel" destination="hOy-fF-H6s" id="D1W-uI-VpO"/>
+                        <outlet property="songCoverArtImageView" destination="VQ9-lQ-Bz9" id="qM4-aE-eZd"/>
+                        <outlet property="userProfilePictureImageView" destination="cfr-4s-5au" id="rwM-Z0-leF"/>
+                        <outlet property="usernameLabel" destination="9sr-ex-o3F" id="cCM-jD-bs2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vh9-De-5Vx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -548,17 +664,17 @@
                                 <rect key="frame" x="241" y="89" width="70" height="70"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opc-Bk-dtW">
-                                <rect key="frame" x="16" y="78" width="131" height="48"/>
+                                <rect key="frame" x="16" y="78" width="131" height="39"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeB-U4-seK">
-                                <rect key="frame" x="16" y="127" width="131" height="41"/>
+                                <rect key="frame" x="16" y="161" width="131" height="41"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Genre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9a-6g-jdS">
-                                <rect key="frame" x="16" y="184" width="92" height="21"/>
+                                <rect key="frame" x="16" y="210" width="92" height="21"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -589,12 +705,28 @@
                                     <action selector="previewButtonPressed:" destination="gpY-oP-i24" eventType="touchUpInside" id="eUq-OP-RyW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAS-cq-eFU">
+                                <rect key="frame" x="16" y="125" width="139" height="28"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmy-A3-n6q">
+                                <rect key="frame" x="96" y="435" width="128" height="41"/>
+                                <state key="normal" image="button-buy-spotify.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openSpotifyLinkButtonPressed:" destination="gpY-oP-i24" eventType="touchUpInside" id="Ttc-8D-Pa9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="rZH-e0-won"/>
                     <connections>
                         <outlet property="albumNameLabel" destination="CeB-U4-seK" id="VS7-s3-geb"/>
+                        <outlet property="artistNameLabel" destination="lAS-cq-eFU" id="rC9-a5-ZCQ"/>
                         <outlet property="songCoverArtImageView" destination="s3W-lg-Bhr" id="nab-bu-LN7"/>
                         <outlet property="songGenreLabel" destination="t9a-6g-jdS" id="Vqv-Ah-ghp"/>
                         <outlet property="songNameLabel" destination="opc-Bk-dtW" id="5in-pt-ktc"/>
@@ -683,6 +815,7 @@
     </scenes>
     <resources>
         <image name="Button.png" width="165" height="48"/>
+        <image name="button-buy-spotify.png" width="128" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -690,7 +823,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="mrI-0z-njT"/>
+        <segue reference="aNS-TA-pD1"/>
         <segue reference="0jD-CD-HTk"/>
         <segue reference="WUw-c3-JlH"/>
     </inferredMetricsTieBreakers>
