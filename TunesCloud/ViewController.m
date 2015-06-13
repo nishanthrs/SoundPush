@@ -47,6 +47,14 @@
 //        }
 //    }];
     
+    UIImageView *background = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"musicappbackground.png"]];
+    [self.view addSubview: background];
+    
+    [self.view addSubview: self.loginButton];
+    [self.view addSubview: self.signUpButton];
+    [self.view addSubview: self.loginText];
+    [self.view addSubview: self.signUpText];
+    
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options: nil];
     self.pageViewController.dataSource = self;
     
@@ -72,7 +80,7 @@
     // Create a new view controller and pass suitable data.
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
     
-    NSArray *pageImages = @[@"page1.png", @"page2.png", @"page3.png", @"page4.png"];
+    NSArray *pageImages = @[@"Sign In Page", @"Newfeed Page.png", @"page3.png", @"page4.png"];
     pageContentViewController.imageFile = pageImages[index];
     
     NSArray *pageDescriptions = @[@"Welcome to TunesCloud!", @"Share music with your friends!", @"Create groups and post new songs!", @"Upvote and share your favorite songs!"];

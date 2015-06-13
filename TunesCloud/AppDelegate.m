@@ -4,7 +4,6 @@
 //
 //  Created by Nishanth Salinamakki on 4/7/15.
 //  Copyright (c) 2015 Nishanth Salinamakki. All rights reserved.
-// Fix loginViewController screen; don't allow segue unless info is correct!
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>

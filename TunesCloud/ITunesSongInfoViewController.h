@@ -24,8 +24,10 @@
 - (IBAction)previewButtonPressed:(UIButton *)sender;
 - (IBAction)shareButtonPressed:(UIButton *)sender;
 - (IBAction)openSpotifyLinkButtonPressed:(UIButton *)sender;
+- (IBAction)setSongOfTheMomentButtonPressed:(UIButton *)sender;
 
 @property (strong, nonatomic) PFObject *songPost;
+@property (strong, nonatomic) PFObject *favoriteSongPost;
 @property (strong, nonatomic) PFFile *songCoverArtDataFromImage;
 @property (strong, nonatomic) NSData *songCoverArtData;
 @property (strong, nonatomic) MPMoviePlayerController *audioPlayer;

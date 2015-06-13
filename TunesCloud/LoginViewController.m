@@ -11,6 +11,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "FBLoginConstants.h"
 
 @interface LoginViewController () 
 
@@ -27,11 +28,27 @@
     
     self.activityIndicator.hidden = YES;
     
-    PFUser *user = [PFUser currentUser];
+    //PFUser *user = [PFUser currentUser];
     //Automatic login
 //    if (user) {
 //        [self performSegueWithIdentifier: @"appEntrySegue1" sender: self];
 //    }
+    
+    UIImageView *background = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"musicappbackground.png"]];
+    [self.view addSubview: background];
+    
+    [self.view addSubview: self.loginButton];
+    [self.view addSubview: self.loginText];
+    [self.view addSubview: self.facebookLoginButton];
+    [self.view addSubview: self.facebookLoginText];
+    [self.view addSubview: self.signUpButton];
+    [self.view addSubview: self.signUpText];
+    
+    [self.view addSubview: self.infoText1];
+    [self.view addSubview: self.infoText2];
+    
+    [self.view addSubview: self.usernameTextField];
+    [self.view addSubview: self.passwordTextField];
     
     self.usernameTextField.delegate = self;
     self.passwordTextField.delegate = self;
@@ -75,7 +92,6 @@
             [self.incorrectLoginAlertView show];
         }
     }];
-     
 }
 
 - (IBAction)forgotPasswordButtonPressed:(UIButton *)sender {
@@ -85,6 +101,7 @@
 - (IBAction)facebookLoginButtonPressed:(UIButton *)sender {
     self.activityIndicator.hidden = NO;
     [self.activityIndicator startAnimating];
+    NSLog(@"IS THE FUNCTION BEING CALLED?!");
     
     NSArray *permissionsArray = @[@"email", @"user_about_me", @"user_location", @"user_friends", @"user_photos"];
     
@@ -102,9 +119,126 @@
             }
         }
         else {
+            [self updateUserInformation];
+            NSLog(@"CREATING USER!");
             [self performSegueWithIdentifier: @"fbSegue" sender: self];
         }
     }];
+}
+
+#pragma mark - Helper methods for logging in
+
+- (void) updateUserInformation {
+    FBRequest *request = [FBRequest requestForMe]; //Accesses current user information
+    
+    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            NSLog(@"%@", result);
+            
+            NSDictionary *userDictionary = (NSDictionary *) result; //Cast result to NSDictionary
+            
+            NSLog(@"%@", userDictionary[@"name"]);
+            
+            //Create URL for photos
+            NSString *userFacebookID = userDictionary[@"id"];
+            NSURL *pictureURL = [NSURL URLWithString: [NSString stringWithFormat: @"https://graph.facebook.com/%@/picture?type-large&return_ssl_resources=1", userFacebookID]]; //Creates url with user picture using user facebook id
+            //UIImage *userPicture = [[UIImage alloc] initWithData: [[NSData alloc] initWithContentsOfURL: pictureURL]];
+            
+            PFObject *userInformation = [[PFObject alloc] initWithClassName: @"userInfo"];
+            [userInformation saveInBackground];
+            
+            NSMutableDictionary *userProfile = [[NSMutableDictionary alloc] initWithCapacity: 10];
+            if (userDictionary[@"name"]) {
+                userProfile[kCCUserProfileNameKey] = userDictionary[@"name"];
+            }
+            if (userDictionary[@"first_name"]) {
+                userProfile[kCCUserProfileFirstNameKey] = userDictionary[@"first_name"];
+            }
+            if (userDictionary[@"location"][@"name"]) {
+                userProfile[kCCUserProfileLocationKey] = userDictionary[@"location"][@"name"];
+            }
+            if (userDictionary[@"email"]) {
+                userProfile[kCCUserProfileEmailKey] = userDictionary[@"email"];
+            }
+            if ([pictureURL absoluteString]) { //Converts url into string
+                userProfile[kCCProfilePictureURL] = [pictureURL absoluteString];
+            }
+            
+            [[PFUser currentUser] setObject: userProfile forKey: kCCUserProfileKey];
+            [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (error) {
+                    NSLog(@"Error in saving user!");
+                }
+                else {
+                    NSLog(@"User Saved!");
+                }
+            }];
+            
+            [self requestImage];
+        }
+        else {
+            NSLog(@"Error in requesting for information: %@", [error localizedFailureReason]);
+        }
+    }];
+    
+}
+
+- (void) uploadPFFileToParse: (UIImage *) image {
+    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+    
+    if (!imageData) {
+        NSLog(@"Image Data Not Found!");
+    }
+    
+    PFFile *photoFile = [PFFile fileWithData: imageData];
+    [photoFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Photo Upload Successful!");
+            PFObject *photo = [PFObject objectWithClassName: kCCPhotoClassKey];
+            [photo setObject: [PFUser currentUser] forKey: kCCPhotoUserKey];
+            [photo setObject: photoFile forKey: kCCPhotoPictureKey];
+            [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (succeeded) {
+                    NSLog(@"Photo saved successfully!");
+                }
+                else {
+                    NSLog(@"ERROR IN SAVING PHOTO!");
+                    NSLog(@"%@", [error localizedFailureReason]);
+                }
+            }];
+        }
+        else {
+            NSLog(@"ERROR IN UPLOADING PHOTO!");
+        }
+    }];
+}
+
+- (void) requestImage {
+    PFQuery *query = [PFQuery queryWithClassName: kCCPhotoClassKey]; //Retrieves the photo from uploadPFFileToParse helper method
+    [query whereKey: kCCPhotoUserKey equalTo: [PFUser currentUser]]; //Adds constraints to query of PFFiles
+    
+    [query countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
+        if (number == 0) {
+            PFUser *user = [PFUser currentUser];
+            self.imageData = [[NSMutableData alloc] init];
+            
+            NSURL *profilePictureURL = [NSURL URLWithString: user[kCCUserProfileKey][kCCProfilePictureURL]];
+            NSURLRequest *urlRequest = [NSURLRequest requestWithURL: profilePictureURL cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 5.0f];
+            NSURLConnection *urlConnection = [[NSURLConnection alloc] initWithRequest: urlRequest delegate:self];
+            if (!urlConnection) {
+                NSLog(@"FAILED TO DOWNLOAD PICTURE!");
+            }
+        }
+    }];
+}
+
+- (void) connection: (NSURLConnection *) connection didReceiveData:(NSData *)data {
+    [self.imageData appendData: data];
+}
+
+- (void) connectionDidFinishLoading: (NSURLConnection *) connection {
+    UIImage *profileImage = [UIImage imageWithData: self.imageData];
+    [self uploadPFFileToParse: profileImage];
 }
 
 //- (IBAction)facebookLoginButtonPressed:(UIButton *)sender {

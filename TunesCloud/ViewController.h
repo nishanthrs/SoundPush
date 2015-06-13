@@ -11,6 +11,10 @@
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) IBOutlet UIButton *loginButton;
+@property (strong, nonatomic) IBOutlet UIButton *signUpButton;
+@property (strong, nonatomic) IBOutlet UILabel *loginText;
+@property (strong, nonatomic) IBOutlet UILabel *signUpText;
 
 - (IBAction)loginButtonPressed:(UIButton *)sender;
 - (IBAction)signUpButtonPressed:(UIButton *)sender;

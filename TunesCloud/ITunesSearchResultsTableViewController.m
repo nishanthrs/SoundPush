@@ -138,6 +138,7 @@
     NSString *songGenre = songData[@"primaryGenreName"];
     NSString *songPreviewURL = songData[@"previewUrl"];
     UIImageView *songCoverArt = [[UIImageView alloc] initWithImage: [UIImage imageWithData: [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: songData[@"artworkUrl60"]]]]];
+    NSLog(@"THE ARTWORK URL IS %@", songData[@"artworkUrl60"]);
     
     //NSIndexPath *indexPath = [self.songSearchTableView indexPathForSelectedRow];
     //NSDictionary *songData = self.tableData[indexPath];

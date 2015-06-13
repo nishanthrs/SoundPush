@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface UserProfileViewController : UIViewController
 
@@ -14,5 +15,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *favoriteSongLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *songCoverArtImageView;
+
+@property (strong, nonatomic) MPMoviePlayerController *audioPlayer;
+@property (strong, nonatomic) MPMoviePlayerViewController *mediaPlayer;
+
+- (IBAction)playSongButtonPressed:(UIButton *)sender;
 
 @end

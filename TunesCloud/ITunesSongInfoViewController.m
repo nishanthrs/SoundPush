@@ -76,7 +76,10 @@
     self.songPost[@"albumName"] = self.songInformation.albumName;
     self.songPost[@"songGenre"] = self.songInformation.genreName;
     self.songPost[@"coverArt"] = self.songCoverArtDataFromImage;
+    self.songPost[@"coverArtData"] = self.songCoverArtData;
+    self.songPost[@"previewURLString"] = self.songInformation.previewURL;
     self.songPost[@"groupName"] = @"";
+    self.songPost[@"userDescription"] = @"";
     [self.songPost saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"SONG SAVED SUCCESSFULLY!");
@@ -93,6 +96,35 @@
 
 - (IBAction)openSpotifyLinkButtonPressed:(UIButton *)sender {
 
+}
+
+- (IBAction)setSongOfTheMomentButtonPressed:(UIButton *)sender {
+    self.songCoverArtData = UIImagePNGRepresentation(self.songInformation.songCoverArt.image);
+    NSLog(@"DATA FROM THE IMAGE: %@", self.songCoverArtData);
+    self.songCoverArtDataFromImage = [PFFile fileWithData: self.songCoverArtData];
+    
+    [self.songCoverArtDataFromImage saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Cover Art Data saved successfully!");
+        }
+        else if (error) {
+            NSLog(@"DID NOT FREAKING SAVE DATA");
+        }
+    }];
+    
+    self.favoriteSongPost = [[PFObject alloc] initWithClassName: @"FavoriteSong"];
+    self.favoriteSongPost[@"songName"] = self.songInformation.songName;
+    self.favoriteSongPost[@"songArtist"] = self.songInformation.artistName;
+    self.favoriteSongPost[@"coverArtData"] = self.songCoverArtData;
+    self.favoriteSongPost[@"previewURLString"] = self.songInformation.previewURL;
+    [self.favoriteSongPost saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            NSLog(@"Favorite song saved successfully!");
+        }
+        else {
+            NSLog(@"ERROR IN SAVING SONG!");
+        }
+    }];
 }
 
 @end

@@ -21,27 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (FBSession.activeSession.isOpen) {
-        [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-            if (!error) {
-                NSArray *facebookFriends = [result objectForKey: @"data"];
-                NSMutableArray *friendsIDs = [NSMutableArray arrayWithCapacity: [facebookFriends count]];
-                for (NSDictionary *facebookFriend in facebookFriends) {
-                    [friendsIDs addObject: [facebookFriend objectForKey: @"id"]];
-                }
-                //Constructs a query for PFUser that will find facebook friends with ids
-                PFQuery *friendsQuery = [PFUser query];
-                [friendsQuery whereKey: @"fbId" containedIn: friendsIDs];
-                
-                self.listOfFacebookFriends = [friendsQuery findObjects];
-            }
-        }];
-        NSLog(@"FBSession Open!");
-    }
-    else {
-        NSLog(@"Error in opening Facebook friends!");
-    }
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

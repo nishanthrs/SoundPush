@@ -9,7 +9,8 @@
 // 1. Figure out how to execute introspection with NSManagedObjectSubclass (MusicGroup name is null) to make sure that song is being added in only one group
 // 2. Incorporate Spotify link to redirect to song Spotify link (sign up and post to Stack Overflow).
 // 3. Implement 'forgot password' feature using Parse API.
-
+// 4. Load images asynchronously (multithreading)!
+// 5. Fix loginViewController; don't allow segue unless login is valid!!
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>

@@ -4,9 +4,14 @@
 //
 //  Created by Nishanth Salinamakki on 5/13/15.
 //  Copyright (c) 2015 Nishanth Salinamakki. All rights reserved.
-//
+//  Figure out how to get buttons in UITableViewCells working!!! (Online tutorials)
 
 #import "IndividualMusicGroupTableViewController.h"
+#import "SongPostTableViewCell.h"
+#import <Parse/Parse.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface IndividualMusicGroupTableViewController ()
 
@@ -62,21 +67,53 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Cell" forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Cell" forIndexPath:indexPath];
+    
+    SongPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Cell"];
     
     PFObject *songPost = [self.songPosts objectAtIndex: indexPath.row];
+    [songPost saveInBackground];
     
-    NSString *urlString = songPost[@"artworkUrl60"];
-    NSURL *imageURL = [NSURL URLWithString: urlString];
-    NSData *imageData = [[NSData alloc] initWithContentsOfURL: imageURL];
-    UIImageView *songCoverArtImageView = (UIImageView *) [cell viewWithTag: 100];
-    songCoverArtImageView.image = [UIImage imageWithData: imageData];
-    UILabel *songNameLabel = (UILabel *) [cell viewWithTag: 101];
-    songNameLabel.text = songPost[@"songName"];
-    UILabel *songArtistNameLabel = (UILabel *) [cell viewWithTag: 102];
-    songArtistNameLabel.text = songPost[@"songArtist"];
-    UILabel *songAlbumNameLabel = (UILabel *) [cell viewWithTag: 103];
-    songAlbumNameLabel.text = songPost[@"albumName"];
+    NSData *imageData = songPost[@"coverArtData"];
+    cell.songCoverArtImageView.image = [UIImage imageWithData: imageData];
+    
+    cell.songNameLabel.text = songPost[@"songName"];
+    cell.artistNameLabel.text = songPost[@"songArtist"];
+    cell.albumNameLabel.text = songPost[@"albumName"];
+    cell.userDescriptionLabel.text = songPost[@"userDescription"];
+    
+    FBRequest *request = [FBRequest requestForMe];
+    
+    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            NSDictionary *userDictionary = (NSDictionary *) result;
+            NSString *preText = @"Shared by ";
+            cell.usernameLabel.text = [preText stringByAppendingString: userDictionary[@"name"]];
+        }
+    }];
+    
+    cell.playSongPreviewButton.tag = indexPath.row;
+    [cell.playSongPreviewButton addTarget: self action: @selector(playSongPreviewButtonPressed:) forControlEvents: UIControlEventTouchUpInside];
+    //cell.playSpotifyTrackButton.tag = indexPath.row;
+    //cell.likeSongButton.tag = indexPath.row;
+    
+//    NSString *urlString = songPost[@"artworkUrl60"];
+//    NSLog(@"The artwork URL is %@", urlString);
+//    NSData *imageData = songPost[@"coverArtData"];
+//    NSLog(@"IMAGE DATA IS %@", imageData);
+//    UIImageView *songCoverArtImageView = (UIImageView *) [cell viewWithTag: 105];
+//    songCoverArtImageView.image = [UIImage imageWithData: imageData];
+//    UILabel *songNameLabel = (UILabel *) [cell viewWithTag: 101];
+//    songNameLabel.text = songPost[@"songName"];
+//    UILabel *songArtistNameLabel = (UILabel *) [cell viewWithTag: 102];
+//    songArtistNameLabel.text = songPost[@"songArtist"];
+//    UILabel *songAlbumNameLabel = (UILabel *) [cell viewWithTag: 103];
+//    songAlbumNameLabel.text = songPost[@"albumName"];
+//    UILabel *userDescriptionLabel = (UILabel *) [cell viewWithTag: 104];
+//    userDescriptionLabel.text = songPost[@"userDescription"];
+    //[self.playSongPreviewButton addTarget: self action:@selector(playSongPreviewButtonPressed: sender:) forControlEvents: UIControlEventTouchUpInside];
+    
+    NSLog(@"THE DESCRIPTION IS %@", songPost[@"userDescription"]);
     
     return cell;
 }
@@ -124,5 +161,58 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//- (IBAction)playSongPreviewButtonPressed:(UIButton *)sender {
+//    //NSIndexPath *indexPath = [[NSIndexPath alloc] initWithIndex: 1];
+//    
+//    NSLog(@"EVENT RECEIVED!");
+////    PFQuery *query = [PFQuery queryWithClassName: @"SongPost"];
+////    [query whereKey:(NSString *) equalTo:(id)]
+//    
+//    NSLog(@"%ld", (long)sender.tag);
+//    
+//    PFObject *selectedSongPost = [self.songPosts objectAtIndex: sender.tag];
+//    [selectedSongPost saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (!error) {
+//            NSLog(@"Saving of song succeeded!");
+//            NSLog(@"The song name is %@", selectedSongPost[@"songName"]);
+//            NSLog(@"The preview URL is %@", selectedSongPost[@"previewURLString"]);
+//        }
+//        else {
+//            NSLog(@"ERROR IN SAVING SONG!");
+//        }
+//    }];
+//    
+//    self.audioPlayer = [[MPMoviePlayerController alloc] initWithContentURL: [NSURL URLWithString: selectedSongPost[@"previewURLString"]]];
+//    [self.audioPlayer prepareToPlay];
+//}
+
+- (void) playSongPreviewButtonPressed: (id) sender {
+    UIButton *senderButton = (UIButton *) sender;
+    NSLog(@"Row tapped = %ld", (long)senderButton.tag);
+    
+    PFObject *selectedSongPost = [self.songPosts objectAtIndex: senderButton.tag];
+    [selectedSongPost saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            NSLog(@"Saving of song succeeded!");
+            NSLog(@"The song name is %@", selectedSongPost[@"songName"]);
+            NSLog(@"The preview URL is %@", selectedSongPost[@"previewURLString"]);
+        }
+        else {
+            NSLog(@"ERROR IN SAVING SONG!");
+        }
+    }];
+
+    self.audioPlayer = [[MPMoviePlayerController alloc] initWithContentURL: [NSURL URLWithString: selectedSongPost[@"previewURLString"]]];
+    [self.audioPlayer prepareToPlay];
+}
+
+- (IBAction)likeSongButtonPressed:(UIButton *)sender {
+    
+}
+
+- (IBAction)spotifyLinkButtonPressed:(UIButton *)sender {
+    
+}
 
 @end
